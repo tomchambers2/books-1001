@@ -5,6 +5,7 @@
 		<div class="jumbotron">
 			<img src="/images/logo.svg" width="160">
 			<h1>Welcome</h1>
+			<h2>blah</h2>
 			<p>This is your new <a href="http://keystonejs.com" target="_blank">KeystoneJS</a> website.</p>
 			<p>
 				It includes the latest versions of
