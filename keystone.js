@@ -31,7 +31,9 @@ keystone.init({
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'User'
+	'user model': 'User',
+
+	'cloudinary config': process.env.CLOUDINARY_URL
 
 });
 

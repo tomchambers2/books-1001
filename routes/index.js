@@ -28,7 +28,8 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views')
+	views: importRoutes('./views'),
+	api: importRoutes('./api')
 };
 
 // Setup Route Bindings
@@ -36,6 +37,9 @@ exports = module.exports = function(app) {
 	
 	// Views
 	app.get('/', routes.views.index);
+	app.all('/:number([0-9]{1,4})', routes.views.book);
+	app.post('/create-user/:token([a-zA-Z@.-_]+)', routes.api['create-user']);
+	app.all('/add-book/[a-zA-Z0-9]{15}', routes.views['add-book']);
 	app.all('/contact', routes.views.contact);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

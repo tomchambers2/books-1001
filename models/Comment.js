@@ -1,0 +1,15 @@
+var keystone = require('keystone');
+var Types = keystone.Field.Types;
+
+var Comment = new keystone.List('Comment');
+
+Comment.add({
+	bookId: { type: Types.Text },
+	confirmed: { type: Types.Boolean },
+	email: { type: Types.Email },
+	name: { type: Types.Text, required: true, index: true },
+	body: { type: Types.Text, required: true, initial: false },
+	location: { type: Types.Location }
+});
+
+Comment.register();
