@@ -110,11 +110,15 @@
 			them specifically here, instead of bootstrap-3.3.5.min.js #}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
 		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
 			which generate links to edit content for users who can access Keystone #}
 		{% if user and user.canAccessKeystone -%}
 			<script src="/keystone/js/content/editor.js"></script>
 		{%- endif -%}
+
+		<script src="/js/autocomplete.js"></script>
 
 		{# Add scripts that are globally required by your site here. #}
 

@@ -17,6 +17,8 @@ exports = module.exports = function(req, res) {
 			confirmed: false,
 			bookId: req.body.bookId
 		});
+
+		console.log(req.body)
 	
 		var handler = comment.getUpdateHandler(req);
 		handler.process(req.body, {}, function(err) {
@@ -42,13 +44,12 @@ exports = module.exports = function(req, res) {
 
 			locals.book = result;
 
-			console.log("id", typeof locals.book.id)
-
 			Comment.model.find({
-				bookId: result.id
+				bookId: result._id
 			}).exec(function(err, result) {
 				// if (err) ???
 				locals.comments = result;
+				console.log(result)
 			})
 
 			next(err);

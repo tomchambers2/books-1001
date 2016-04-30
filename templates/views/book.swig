@@ -1,3 +1,6 @@
+{% extends "../layouts/default.swig" %}
+
+{% block content %}
 <h1>Book page</h1>
 
 {{book.title}}
@@ -24,6 +27,8 @@
 		Comment:
 		<textarea name="body" id="" cols="30" rows="10"></textarea>
 		Email: <input type="text" name="email">
+		Location: <input type="text" name="location" id="autocomplete">
 		<button type="submit">Add comment</button>
 	</form>
 {% endif %}
+{% endblock %}
