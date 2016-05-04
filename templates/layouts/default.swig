@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+		<script type="text/javascript" src="//fast.fonts.net/jsapi/673c680f-99a4-498e-8dce-eadea32e016d.js"></script>
+
 		<title>{{ title|default("1001 Books") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
@@ -32,71 +34,28 @@
 		{%- block head %}{% endblock %}
 	</head>
 	<body>
+		{%- block intro -%}{%- endblock -%}
+		{{ FlashMessages.renderMessages(messages) }}
 
-		{# HEADER #}
-		<div id="header" class="container">
+		<div class="main">
+			<img src="/images/logo.jpg">
 
-			{# Customise your site"s navigation by changing the navLinks Array in ./routes/middleware.js
-			   ... or completely change this header to suit your design. #}
-			<div role="navigation" class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="/">1001 Books</a>
-					</div>
-					<div class="collapse navbar-collapse">
-						<ul class="nav navbar-nav navbar-left">
-							{%- for link in navLinks -%}
-								{%- set linkClass = '' -%}
-								{%- if link.key == section -%}
-									{%- set linkClass = ' class="active"' -%}
-								{%- endif %}
-								<li{{ linkClass | safe }}>
-									<a href="{{ link.href }}">{{ link.label }}</a>
-								</li>
-							{%- endfor %}
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							{% if user -%}
-								{%- if user.canAccessKeystone -%}
-									<li><a href="/keystone">Open Keystone</a></li>
-								{%- endif -%}
-								<li><a href="/keystone/signout">Sign Out</a></li>
-							{%- else -%}
-								<li><a href="/keystone/signin">Sign In</a></li>
-							{%- endif %}
-						</ul>
-					</div>
-				</div>
+			<div class="content">	
+				{%- block content -%}{%- endblock -%}
+		
+				<footer>
+					<p>Visit A Thousand and One Books as part of LIFT 2016</p>
+			
+					<p>NOW Gallery – Greenwich Peninsula<br>
+					London SE10 0SQ<br>
+					Nearest station: North Greenwich<br>
+					11 June – 2 July 2016<br>
+					Weekdays: 3pm–7pm (closed Mondays)<br>
+					Weekends: Midday–7pm</p>
+					
+					<iframe class="actAsDiv" width="427" height="405" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=NOW%20gallery%20London%20SE10%200SQ&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+				</footer>
 			</div>
-		</div>
-
-		{# BODY #}
-		<div id="body">
-			{# NOTE:
-			   There is no .container wrapping class around body blocks to allow more flexibility in design.
-			   Remember to include it in your templates when you override the intro and content blocks! #}
-
-			{# The Intro block appears above flash messages (used for temporary information display) #}
-			{%- block intro -%}{%- endblock -%}
-
-			{# Flash messages allow you to display once-off status messages to users, e.g. form
-			   validation errors, success messages, etc. #}
-			{{ FlashMessages.renderMessages(messages) }}
-
-			{# The content block should contain the body of your template"s content #}
-			{%- block content -%}{%- endblock -%}
-		</div>
-
-		{# FOOTER #}
-		<div id="footer" class="container">
-			{# You don"t _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it! #}
-			<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
 		</div>
 
 		{# JAVASCRIPT #}

@@ -7,11 +7,12 @@ autoIncrement.initialize(keystone.mongoose.connections[0]);
 var Book = new keystone.List('Book');
 
 Book.add({
-	number: { type: Types.Number, required: true, index: true, initial: 1, dropDups: true },
-	title: { type: Types.Text, required: true, index: true, initial: "", note: 'boobs' },
-	dedication: { type: Types.Text },
-	image: { type: Types.CloudinaryImage },
-	location: { type: Types.Location }
+	number: { type: Types.Number },
+	email: { type: Types.Email, required: true, initial: true, index: true, unique: true },
+	token: { type: Types.Text },
+	title: { type: Types.Text, initial: true },
+	dedication: { type: Types.Text, initial: true },
+	image: { type: Types.CloudinaryImage }
 });
 
 Book.schema.plugin(autoIncrement.plugin, { model: 'Book', field: 'number', startAt: 1 });
