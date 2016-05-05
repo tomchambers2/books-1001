@@ -36,7 +36,9 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 
-	'cloudinary config': process.env.CLOUDINARY_URL
+	'cloudinary config': process.env.CLOUDINARY_URL,
+
+	// 'module root': process.env.MODULE_ROOT
 
 });
 
@@ -101,7 +103,6 @@ keystone.set('email nodemailer', mailgunApiTransport({ auth: { api_key: process.
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'enquiries': 'enquiries',
 	'users': 'users'
 });
 

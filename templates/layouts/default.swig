@@ -43,6 +43,8 @@
 			<div class="content">	
 				{%- block content -%}{%- endblock -%}
 		
+				<hr>
+
 				<footer>
 					<p>Visit A Thousand and One Books as part of LIFT 2016</p>
 			

@@ -35,13 +35,10 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function(app) {
 	
-	// Views
 	app.get('/', routes.views.index);
-	app.all('/:number([0-9]{1,4})', routes.views.book);
+	app.all('/:number([0-9]{1,5})', routes.views.book);
 	app.post('/create-user', routes.api['create-user']);
 	app.all('/add-book/:token([a-zA-Z0-9]{16})', routes.views['add-book']);
-	// app.all('/add-book', routes.views['add-book']);
-	app.all('/contact', routes.views.contact);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

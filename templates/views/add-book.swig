@@ -3,7 +3,7 @@
 {% block content %}
 	{% if invalidToken %}
 		<p>This token is invalid. You may have copy-pasted the link incorrectly from your email or the token may already have been used.</p>
-		<p>If you have trouble please send an email to hello@athousandandonebooks.com</p>
+		<p>If you have trouble please send an email to librarian@athousandandonebooks.com</p>
 	{% else %}
 		<p>Thank you so much for giving a book to our pop-up library. Your unique book number is:
 			<span class="number">{{number}}</span>
@@ -11,7 +11,7 @@
 
 		<p>Please fill in the details below and we will buy your book from an independent bookshop. Your dedication will appear on the inside cover.</p>
 
-		<form action="">
+		<form method="POST">
 			<label for="name">Your name</label>
 			<input type="text" id="name" name="name" placeholder="(as you'd like it to appear in your book)">
 			<label for="title">Book Title</label>
@@ -32,10 +32,6 @@
 			<img src="/images/empathy-museum-logo.jpg" alt=""><br>
 			<a href="http://www.empathymuseum.com">www.empathymuseum.com</a><br>
 			<img src="/images/social-icons.jpg" alt="">
-		</p>
-
-		<p>
-			<hr>
 		</p>
 	{% endif %}
 {% endblock %}

@@ -22,8 +22,10 @@ exports = module.exports = function(req, res) {
 		}).exec(function(err, result) {
 			if (!result) {
 				locals.invalidToken = true;
+				return next();
 			}
-			locals.number = pad(result.number);
+			locals.book = result;
+			locals.number = pad(result.number, 4);
 			next();
 		});
 	})	
@@ -34,16 +36,32 @@ exports = module.exports = function(req, res) {
 		var updater = locals.book.getUpdateHandler(req);
 
 		updater.process(req.body, {
-			fields: 'title'
-		}, function(err) {
-			locals.enquirySubmitted = true;
+			fields: 'title, author, dedication, name',
+			flashErrors: true
+		}, function(err, item, other) {
+			console.log("item",item)
+			console.log('other',other)
 			if (err) {
-				console.log(err.errors)
+				console.error(err.errors);
 				locals.validationErrors = err.errors;
 			} else {
 				locals.bookAdded = true;
 
-				//send confirmation email
+				new keystone.Email({
+					templateExt: 'swig',
+		    		templateEngine: require('swig'),
+		    		templateName: 'book-added'
+		    	}).send({
+					to: locals.book.email,
+					from: {
+						name: 'A Thousand and One Books',
+						email: 'contact@athousandandonebooks.com'
+					},
+					subject: 'Confirmation of your book being added to A Thousand and One Books',
+					book: req.body.token
+				}, function(err, res) {
+					if (err) console.error(err);
+				});				
 			}
 			next();
 		});

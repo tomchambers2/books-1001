@@ -1,5 +1,4 @@
 html, body {
-  line-height: 24px;
   color: #534741;
   font-size: 20px;
   font-family: acumin-pro, sans-serif;
@@ -34,7 +33,41 @@ p {
   font-weight: 100; }
 
 label {
+  display: inline-block;
   font-size: 16px;
   line-height: 16px;
   font-weight: none;
-  color: #6B6B6B; }
+  color: #6B6B6B;
+  margin-top: 30px;
+  margin-bottom: 12px; }
+
+input, textarea {
+  display: block;
+  width: 100%;
+  font-style: italic;
+  color: #C4C4C4;
+  font-size: 20px;
+  padding: 6px;
+  background: #F2F2F2;
+  box-shadow: none; }
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+  font-style: normal;
+  color: #000000;
+  background: #fff; }
+
+button[type="submit"] {
+  padding: 8px 28px;
+  background: #fff;
+  border: 1px solid black;
+  font-size: 20px;
+  margin: 10px 0;
+  margin-top: 15px; }
+
+footer {
+  margin-bottom: 150px; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333; }
