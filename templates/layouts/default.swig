@@ -9,7 +9,7 @@
 
 		<script type="text/javascript" src="//fast.fonts.net/jsapi/673c680f-99a4-498e-8dce-eadea32e016d.js"></script>
 
-		<title>{{ title|default("1001 Books") }}</title>
+		<title>{{ title|default("A Thousand and One Books") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
