@@ -20,7 +20,21 @@ module.exports = function(req, res) {
 		} else {
 			res.status(200).json({ success: true });
 
-			//send email to user with token link
+			new keystone.Email({
+				templateExt: 'swig',
+	    		templateEngine: require('swig'),
+	    		templateName: 'user-created'
+	    	}).send({
+				to: req.body.email,
+				from: {
+					name: 'A Thousand and One Books',
+					email: 'contact@athousandandonebooks.com'
+				},
+				subject: 'Thank you for your donation to A Thousand and One Books',
+				token: req.body.token
+			}, function(err, res) {
+				if (err) console.error(err);
+			});			
 		}
 	});
 }

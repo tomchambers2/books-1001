@@ -10,8 +10,6 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'home';
 
-	console.log('here')
-
 	view.on('init', function(next) {
 		Book.model.find().exec().then(function(result) {
 			locals.books = result;

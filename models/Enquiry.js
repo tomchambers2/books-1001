@@ -50,8 +50,8 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 		new keystone.Email('enquiry-notification').send({
 			to: admins,
 			from: {
-				name: '1001 Books',
-				email: 'contact@1001-books.com'
+				name: 'a thousand and one books',
+				email: 'contact@athousandandonebooks.com'
 			},
 			subject: 'New Enquiry for 1001 Books',
 			enquiry: enquiry

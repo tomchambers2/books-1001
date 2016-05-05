@@ -5,6 +5,9 @@ require('dotenv').load();
 // Require keystone
 var keystone = require('keystone');
 var swig = require('swig');
+require('keystone-nodemailer');
+var sparkPostTransport = require('nodemailer-sparkpost-transport');
+var mailgunApiTransport = require('nodemailer-mailgun-transport');
 
 // Disable swig's bulit-in template caching, express handles it
 swig.setDefaults({ cache: false });
@@ -15,8 +18,8 @@ swig.setDefaults({ cache: false });
 
 keystone.init({
 
-	'name': '1001 Books',
-	'brand': '1001 Books',
+	'name': 'A Thousand and One Books',
+	'brand': 'A Thousand and One Books',
 	
 	'sass': 'public',
 	'static': 'public',
@@ -92,6 +95,8 @@ keystone.set('email rules', [{
 // Load your project's email test routes
 
 keystone.set('email tests', require('./routes/emails'));
+
+keystone.set('email nodemailer', mailgunApiTransport({ auth: { api_key: process.env.MAILGUN_API_KEY, domain: "athousandandonebooks.com" } }));
 
 // Configure the navigation bar in Keystone's Admin UI
 
