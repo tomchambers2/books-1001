@@ -12,9 +12,9 @@ Book.add({
 	number: { type: Types.Number },
 	email: { type: Types.Email, required: true, initial: true, index: true, unique: true },
 	token: { type: Types.Text },
+	title: { type: Types.Text, initial: true },
 	author: { type: Types.Text, initial: true },
 	name: { type: Types.Text, initial: true },
-	title: { type: Types.Text, initial: true },
 	dedication: { type: Types.Textarea, initial: true },
 	image: { type: Types.CloudinaryImage }
 });
