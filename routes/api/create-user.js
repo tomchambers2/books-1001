@@ -28,7 +28,7 @@ module.exports = function(req, res) {
 				to: req.body.email,
 				from: {
 					name: 'A Thousand and One Books',
-					email: 'contact@athousandandonebooks.com'
+					email: 'librarian@athousandandonebooks.com'
 				},
 				subject: 'Thank you for your donation to A Thousand and One Books',
 				token: req.body.token

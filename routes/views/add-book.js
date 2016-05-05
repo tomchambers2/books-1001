@@ -55,7 +55,7 @@ exports = module.exports = function(req, res) {
 					to: locals.book.email,
 					from: {
 						name: 'A Thousand and One Books',
-						email: 'contact@athousandandonebooks.com'
+						email: 'librarian@athousandandonebooks.com'
 					},
 					subject: 'Confirmation of your book being added to A Thousand and One Books',
 					book: req.body.token
