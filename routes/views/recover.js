@@ -19,6 +19,7 @@ exports = module.exports = function(req, res) {
 			locals.recovered = true;
 
 			if (!result) {
+				console.error('Recover: failed to find email ' + req.body.email)
 				return next();
 			}
 
@@ -27,7 +28,7 @@ exports = module.exports = function(req, res) {
 	    		templateEngine: require('swig'),
 	    		templateName: 'recover'
 	    	}).send({
-				to: locals.book.email,
+				to: result.email,
 				from: {
 					name: 'A Thousand and One Books',
 					email: 'librarian@athousandandonebooks.com'
@@ -43,6 +44,6 @@ exports = module.exports = function(req, res) {
 		});
 	})	
 
-	view.render('add-book');
+	view.render('recover');
 	
 };

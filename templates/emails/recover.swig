@@ -7,7 +7,7 @@
 	
 	<span style="font-size:16px">Your book number is <b>{{number}}</b>
 	{% if book.title %}
-		and you can see the details at <a href="http://athousandandonebooks.com/{{number}}/" style="color:#ff0000">HERE</a><br></span>
+		and you can see the details at <a href="http://athousandandonebooks.com/{{book.number}}/" style="color:#ff0000">http://athousandandonebooks.com/{{book.number}}/</a><br></span>
 
 		<p>
 			{{book.title}} by {{book.author}}<br>
