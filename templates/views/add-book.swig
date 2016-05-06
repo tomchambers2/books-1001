@@ -19,7 +19,7 @@
 			<label for="author">Author</label>
 			<input type="text" id="author" name="author" placeholder="Name of author">
 			<label for="dedication">I am giving this book because...</label>
-			<textarea name="dedication" id="dedication" cols="30" rows="10"></textarea>
+			<textarea name="dedication" id="dedication" cols="30" rows="10" placeholder="(in 100 words or less)"></textarea>
 			<button type="submit">Submit</button>
 		</form>
 
