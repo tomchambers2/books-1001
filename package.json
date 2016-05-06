@@ -16,6 +16,7 @@
     "nodemailer-sparkpost-transport": "git+https://github.com/SparkPost/nodemailer-sparkpost-transport.git",
     "process-nextick-args": "^1.0.6",
     "rand-token": "^0.2.1",
+    "supertest": "^1.2.0",
     "swig": "^1.4.1",
     "underscore": "^1.8.3"
   },
