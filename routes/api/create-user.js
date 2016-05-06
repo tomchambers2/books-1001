@@ -4,6 +4,8 @@ var Book = keystone.list('Book');
 
 module.exports = function(req, res) {
 	if (req.body.secret != process.env.API_SECRET) {
+		console.error('Invalid API secret used: ',req.body.secret);
+		console.error(req.body);
 		return res.status(401).json({ errors: ["API secret was invalid"] });
 	}
 
