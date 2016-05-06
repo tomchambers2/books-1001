@@ -55,7 +55,7 @@
 					Weekdays: 3pm–7pm (closed Mondays)<br>
 					Weekends: Midday–7pm</p>
 					
-					<iframe class="actAsDiv" width="427" height="405" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=NOW%20gallery%20London%20SE10%200SQ&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+					{# <iframe class="actAsDiv" width="427" height="405" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=NOW%20gallery%20London%20SE10%200SQ&amp;aq=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe> #}
 				</footer>
 			</div>
 		</div>
@@ -71,15 +71,12 @@
 			them specifically here, instead of bootstrap-3.3.5.min.js #}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
 		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
 			which generate links to edit content for users who can access Keystone #}
 		{% if user and user.canAccessKeystone -%}
 			<script src="/keystone/js/content/editor.js"></script>
 		{%- endif -%}
 
-		<script src="/js/autocomplete.js"></script>
 
 		{# Add scripts that are globally required by your site here. #}
 

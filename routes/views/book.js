@@ -1,6 +1,7 @@
 var keystone = require('keystone');
 var Book = keystone.list('Book');
 var Comment = keystone.list('Comment');
+var _ = require('lodash');
 
 exports = module.exports = function(req, res) {
 	
@@ -10,16 +11,17 @@ exports = module.exports = function(req, res) {
 	// Set locals
 	locals.section = 'book';
 
-
-
 	view.on('post', function(next) {
 		var comment = new Comment.model({
 			confirmed: false,
 			bookId: req.body.bookId
 		});
 
-		console.log(req.body)
-	
+		req.body.location = {
+			geo_lat: req.body.geo_location_lat,
+			geo_lng: req.body.geo_location_lng
+		}
+
 		var handler = comment.getUpdateHandler(req);
 		handler.process(req.body, {}, function(err) {
 			if (err) {
@@ -49,11 +51,12 @@ exports = module.exports = function(req, res) {
 				bookId: result._id
 			}).exec(function(err, result) {
 				// if (err) ???
-				locals.comments = result;
 				console.log(result)
+				locals.comments = result;
+
+				next(err);
 			})
 
-			next(err);
 		});
 	});
 

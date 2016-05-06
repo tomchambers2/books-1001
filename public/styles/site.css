@@ -84,3 +84,6 @@ hr {
 
 .email .small {
   font-size: 14px; }
+
+#map {
+  height: 500px; }
