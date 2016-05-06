@@ -1,7 +1,3 @@
-{# TODO:
-   Jade email templates inherit a default base that's included with Keystone,
-   the Swig templates need this to be ported across and bundled directly. #}
-
 {% block body-contents %}
 	<span style="font-size:16px">You recently requested a reminder of your donation to A Thousand and One Books</span>
 	

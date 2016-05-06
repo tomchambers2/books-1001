@@ -5,6 +5,7 @@ var Comment = new keystone.List('Comment');
 
 Comment.add({
 	bookId: { type: Types.Text },
+	token: { type: Types.Text },
 	confirmed: { type: Types.Boolean },
 	email: { type: Types.Email },
 	name: { type: Types.Text, required: true, index: true },
