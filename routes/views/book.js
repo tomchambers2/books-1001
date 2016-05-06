@@ -31,7 +31,7 @@ exports = module.exports = function(req, res) {
 				commentValidationErrors = err.errors;
 				console.log(err.errors)
 			} else {
-				req.flash('success', 'Your comment was added.');
+				req.flash('success', 'Your comment was added. Please check your email to confirm.');
 				locals.commentAdded = true;
 
 				new keystone.Email({
@@ -45,7 +45,8 @@ exports = module.exports = function(req, res) {
 						email: 'librarian@athousandandonebooks.com'
 					},
 					subject: 'Please confirm your comment on A Thousand and One Books',
-					token: token
+					token: token,
+					book: locals.book
 				}, function(err, res) {
 					if (err) console.error(err);
 				});				
@@ -53,6 +54,19 @@ exports = module.exports = function(req, res) {
 			next();
 		});
 		
+	});
+
+	view.on('get', { confirm: 'comment' }, function(next) {
+		Comment.model.findOneAndUpdate({
+			token: req.query.token
+		}, { confirmed: true }, function(err, result) {
+			if (err || !result) {
+				req.flash('error', 'Sorry, we weren\'t able to confirm your comment. Please try again or contact librarian@athousandandonebooks.com');
+				return next(err);
+			}
+			req.flash('success', 'Your comment was added');
+			next();
+		})
 	});
 
 	view.on('init', function(next) {
@@ -67,7 +81,8 @@ exports = module.exports = function(req, res) {
 			locals.book = result;
 
 			Comment.model.find({
-				bookId: result._id
+				bookId: result._id,
+				confirmed: true
 			}).exec(function(err, result) {
 				// if (err) ???
 				console.log(result)
