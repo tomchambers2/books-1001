@@ -17,5 +17,5 @@
 	<p style="font-size:14px">The Empathy Museum</p>
 	<p style="font-size:14px"><a href="http://www.empathymuseum.com">www.empathymuseum.com</a></p>
 	
-	<img src="http://athousandandonebooks.com/public/images/empathy-museum-logo.png">
+	<img src="/images/empathy-museum-logo.png">
 {% endblock %}
