@@ -98,7 +98,7 @@ keystone.set('email rules', [{
 
 keystone.set('email tests', require('./routes/emails'));
 
-keystone.set('email nodemailer', mailgunApiTransport({ auth: { api_key: process.env.MAILGUN_API_KEY, domain: "athousandandonebooks.com" } }));
+keystone.set('email nodemailer', mailgunApiTransport({ auth: { api_key: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN } }));
 
 // Configure the navigation bar in Keystone's Admin UI
 

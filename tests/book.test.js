@@ -135,12 +135,10 @@ describe('book functions', function() {
 
 		});
 
-		it('accepts a new comment with a location on a book page', function() {
+		it('accepts a new comment with a location on a book page and sends an email', function() {
+			// comment added
 
-		});
-
-		it('generates a token and sends an email when a new comment is posted', function() {
-
+			// email sent correctly
 		});
 
 		it('confirms and displays a comment when confirm link is followed', function() {
