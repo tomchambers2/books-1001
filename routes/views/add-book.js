@@ -37,7 +37,7 @@ exports = module.exports = function(req, res) {
 
 		updater.process(req.body, {
 			fields: 'title, author, dedication, name',
-			flashErrors: true
+			flashErrors: 'true'
 		}, function(err, item, other) {
 			console.log("item",item)
 			console.log('other',other)

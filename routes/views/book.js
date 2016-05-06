@@ -36,7 +36,8 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		Book.model.findOne({
-			number: req.params.number
+			number: req.params.number,
+			title: { $exists: true }
 		}).exec(function(err, result) {
 			if (!result) {
 				return res.status(404).send(keystone.wrapHTMLError('This book does not exist in our library'));

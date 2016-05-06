@@ -73,8 +73,14 @@ hr {
   background: #333; }
 
 /* email */
-.email h1 {
+.large {
   font-size: 16px; }
 
-.email p {
+.small {
+  font-size: 14px; }
+
+.email .large {
+  font-size: 16px; }
+
+.email .small {
   font-size: 14px; }

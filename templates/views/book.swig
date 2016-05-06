@@ -1,12 +1,15 @@
 {% extends "../layouts/default.swig" %}
 
 {% block content %}
-	<h1>Book page</h1>
+	<h2>{{book.title}} by {{book.author}}</h2>
 
-	{{book.title}}
+	<p>
+		<img src="{{ book._.image.fit(500,600) }}">
+	</p>
 
 	<h1>Comments</h1>
-	{{book.dedication}}
+	<p>{{book.dedication}}</p>
+	<p>Dedication by {{book.name}}, donator of this book</p>
 	{% for comment in comments %}
 		<p>{{comment.body}}</p>
 		<p><b>{{comment.name}}</b></p>
