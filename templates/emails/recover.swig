@@ -1,16 +1,16 @@
 {% block body-contents %}
-	<span style="font-size:16px">You recently requested a reminder of your donation to A Thousand and One Books</span>
+	<p style="font-size:16px">You recently requested a reminder of your donation to A Thousand and One Books</p>
 	
-	<span style="font-size:16px">Your book number is <b>{{number}}</b>
+	<p style="font-size:16px">Your book number is <b>{{number}}</b>
 	{% if book.title %}
-		and you can see the details at <a href="http://athousandandonebooks.com/{{book.number}}/" style="color:#ff0000">http://athousandandonebooks.com/{{book.number}}/</a><br></span>
+		and you can see the details at <a href="http://athousandandonebooks.com/{{book.number}}/" style="color:#ff0000">http://athousandandonebooks.com/{{book.number}}/</a><br></p>
 
 		<p>
 			{{book.title}} by {{book.author}}<br>
 			Your dedication: {{book.dedication}}
 		</p>
 	{% else %}
-		. You haven't given us the details of your book yet. You can do that here: <a href="http://athousandandonebooks.com/add-book/{{book.token}}">http://athousandandonebooks.com/add-book/{{book.token}}</a></span>
+		. You haven't given us the details of your book yet. You can do that here: <a href="http://athousandandonebooks.com/add-book/{{book.token}}">http://athousandandonebooks.com/add-book/{{book.token}}</a></p>
 	{% endif %}
 	
 	<p style="font-size:14px">

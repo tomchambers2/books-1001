@@ -29,7 +29,7 @@
 
 		<p>
 			-<br>
-			<img src="/images/empathy-museum-logo.jpg" alt=""><br>
+			<img src="/images/empathy-museum-logo.png"><br>
 			<a href="http://www.empathymuseum.com">www.empathymuseum.com</a><br>
 			<img src="/images/social-icons.jpg" alt="">
 		</p>

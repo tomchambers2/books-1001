@@ -24,8 +24,6 @@ p {
 
 .number {
   display: block;
-  padding-bottom: 20px;
-  line-height: 72px;
   color: #ED1C24;
   text-align: left;
   font-size: 60px;
@@ -49,7 +47,7 @@ input, textarea {
   font-size: 20px;
   padding: 6px;
   background: #F2F2F2;
-  box-shadow: none; }
+  border: 1px solid #ccc; }
 
 input:hover, input:focus, textarea:hover, textarea:focus {
   font-style: normal;
@@ -71,19 +69,3 @@ hr {
   border: 0;
   height: 1px;
   background: #333; }
-
-/* email */
-.large {
-  font-size: 16px; }
-
-.small {
-  font-size: 14px; }
-
-.email .large {
-  font-size: 16px; }
-
-.email .small {
-  font-size: 14px; }
-
-#map {
-  height: 500px; }
