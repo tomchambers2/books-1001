@@ -40,6 +40,7 @@ exports = module.exports = function(app) {
 	app.post('/create-user', routes.api['create-user']);
 	app.all('/add-book/:token([a-zA-Z0-9]{16})', routes.views['add-book']);
 	app.all('/recover', routes.views.recover);
+	app.all('/link-by-email', routes.views['link-by-email']);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

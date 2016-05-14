@@ -108,7 +108,8 @@ keystone.set('nav', {
 
 // Start Keystone to connect to your database and initialise the web server
 
-module.exports = function() {
+module.exports = function(mongoose, nodemailer) {
+	console.log("START KEYSTONE")
 	keystone.start();
-	return keystone.app;
+	return keystone;
 };
