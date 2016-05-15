@@ -10,7 +10,7 @@ var Book = new keystone.List('Book', {
 
 Book.add({
 	number: { type: Types.Number },
-	email: { type: Types.Email, required: true, initial: true, index: true, unique: true },
+	email: { type: Types.Email, initial: true, index: true, unique: true },
 	token: { type: Types.Text },
 	title: { type: Types.Text, initial: true },
 	author: { type: Types.Text, initial: true },

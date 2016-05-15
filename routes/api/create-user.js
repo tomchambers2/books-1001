@@ -14,6 +14,10 @@ module.exports = function(req, res) {
 
 	req.body.token = randtoken.generate(16);
 
+	if (!req.body.email) {
+		return res.status(400).json({ errors: { email: 'Email missing from body of request' }});
+	}
+
 	updater.process(req.body, {
 		fields: 'email, token'
 	}, function(err) {
