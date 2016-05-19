@@ -1,11 +1,19 @@
 var keystone = require('keystone');
 var Book = keystone.list('Book');
+var Joi = require('joi');
 
 function pad(num, size) {
     var s = num+"";
     while (s.length < size) s = "0" + s;
     return s;
 }
+
+var validationSchema = Joi.object().keys({
+    name: Joi.string().required().options({ language: { any: { empty: 'must be filled in' }, label: 'Name' } }),
+    title: Joi.string().required().options({ language: { any: { empty: 'must be filled in' }, label: 'Title' } }),
+    author: Joi.string().allow(''),
+    dedication: Joi.string().max(100).required().options({ language: { any: { empty: 'must be filled in', }, label: 'Dedication' } })
+});
 
 exports = module.exports = function(req, res) {
 	
@@ -35,37 +43,36 @@ exports = module.exports = function(req, res) {
 
 		var updater = locals.book.getUpdateHandler(req);
 
-		req.body.lastUpdated = Date.now();
+		locals.formData = {
+			name: req.body.name,
+			title: req.body.title,
+			author: req.body.author,
+			dedication: req.body.dedicaton,
+		}
 
-		console.log(req.body.lastUpdated)
-
-		updater.process(req.body, {
-			fields: 'title, author, dedication, name, lastUpdated',
-			flashErrors: 'true'
-		}, function(err, item, other) {
-			if (err) {
-				locals.validationErrors = err.errors;
-			} else {
-				locals.bookAdded = true;
-
-				// new keystone.Email({
-				// 	templateExt: 'swig',
-		  //   		templateEngine: require('swig'),
-		  //   		templateName: 'book-added'
-		  //   	}).send({
-				// 	to: locals.book.email,
-				// 	from: {
-				// 		name: 'A Thousand and One Books',
-				// 		email: 'librarian@athousandandonebooks.com'
-				// 	},
-				// 	subject: 'Confirmation of your book being added to A Thousand and One Books',
-				// 	book: req.body.token
-				// }, function(err, res) {
-				// 	if (err) console.error(err);
-				// });				
+		Joi.validate(req.body, validationSchema, { abortEarly: false }, function (errors, value) { 
+			if (errors) {
+				for (var i = 0; i < errors.details.length; i++) {
+					req.flash('error', errors.details[i].message);
+				}
+				return next();
 			}
-			next();
+
+			req.body.lastUpdated = Date.now();
+					
+			updater.process(req.body, {
+				fields: 'title, author, dedication, name, lastUpdated',
+				flashErrors: 'true'
+			}, function(err, item, other) {
+				if (err) {
+					locals.validationErrors = err.errors;
+				} else {
+					locals.bookAdded = true;			
+				}
+				next();
+			});
 		});
+
 	});
 
 	view.render('add-book');

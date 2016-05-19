@@ -15,13 +15,13 @@
 
 		<form method="POST">
 			<label for="name">Your name</label>
-			<input type="text" id="name" name="name" placeholder="(as you'd like it to appear in your book)">
+			<input type="text" id="name" name="name" value="{{formData.name}}" placeholder="(as you'd like it to appear in your book)">
 			<label for="title">Book Title</label>
-			<input type="text" id="author" name="title" placeholder="Book Title">
+			<input type="text" id="title" name="title" value="{{formData.title}}" placeholder="Book Title">
 			<label for="author">Author</label>
-			<input type="text" id="author" name="author" placeholder="Name of author">
+			<input type="text" id="author" name="author" value="{{formData.author}}" placeholder="Name of author">
 			<label for="dedication">I am giving this book because...</label>
-			<textarea name="dedication" id="dedication" cols="30" rows="10" placeholder="(in 100 words or less)"></textarea>
+			<textarea name="dedication" id="dedication" cols="30" rows="10" placeholder="(in 100 words or less)" maxlength="100">{{formData.dedication}}</textarea>
 			<button type="submit">Submit</button>
 		</form>
 

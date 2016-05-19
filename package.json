@@ -6,6 +6,7 @@
     "async": "^1.5.0",
     "browserify": "^13.0.0",
     "dotenv": "^1.1.0",
+    "joi": "^8.1.0",
     "keystone": "^0.3.16",
     "keystone-nodemailer": "^0.1.1",
     "lodash": "^4.11.2",

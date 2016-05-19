@@ -16,7 +16,8 @@ Book.add({
 	author: { type: Types.Text, initial: true },
 	name: { type: Types.Text, initial: true },
 	dedication: { type: Types.Textarea, initial: true },
-	image: { type: Types.CloudinaryImage }
+	image: { type: Types.CloudinaryImage },
+	lastUpdated: { type: Types.Text }
 });
 
 Book.defaultColumns = 'number, title, author, name, email';
