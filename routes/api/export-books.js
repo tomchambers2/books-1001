@@ -12,7 +12,9 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 
 	view.on('init', function(next) {
-		Book.model.find({}).exec(function(err, books) {
+		Book.model.find({
+			title: { $exists: true, $ne: "" }
+		}).exec(function(err, books) {
 			if (!books.length) {
 				return res.status(404).send(keystone.wrapHTMLError('No books in database'));
 			}
