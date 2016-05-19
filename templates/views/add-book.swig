@@ -4,6 +4,8 @@
 	{% if invalidToken %}
 		<p>This token is invalid. You may have copy-pasted the link incorrectly from your email or the token may already have been used.</p>
 		<p>If you have trouble please send an email to librarian@athousandandonebooks.com</p>
+	{% elseif bookAdded %}
+		<p>Thank you for your donation! We'll be in touch once the site launches.</p>
 	{% else %}
 		<p>Thank you so much for giving a book to our pop-up library. Your unique book number is:
 			<span class="number">{{number}}</span>

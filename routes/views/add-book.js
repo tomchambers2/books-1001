@@ -35,33 +35,34 @@ exports = module.exports = function(req, res) {
 
 		var updater = locals.book.getUpdateHandler(req);
 
+		req.body.lastUpdated = Date.now();
+
+		console.log(req.body.lastUpdated)
+
 		updater.process(req.body, {
-			fields: 'title, author, dedication, name',
+			fields: 'title, author, dedication, name, lastUpdated',
 			flashErrors: 'true'
 		}, function(err, item, other) {
-			console.log("item",item)
-			console.log('other',other)
 			if (err) {
-				console.error(err.errors);
 				locals.validationErrors = err.errors;
 			} else {
 				locals.bookAdded = true;
 
-				new keystone.Email({
-					templateExt: 'swig',
-		    		templateEngine: require('swig'),
-		    		templateName: 'book-added'
-		    	}).send({
-					to: locals.book.email,
-					from: {
-						name: 'A Thousand and One Books',
-						email: 'librarian@athousandandonebooks.com'
-					},
-					subject: 'Confirmation of your book being added to A Thousand and One Books',
-					book: req.body.token
-				}, function(err, res) {
-					if (err) console.error(err);
-				});				
+				// new keystone.Email({
+				// 	templateExt: 'swig',
+		  //   		templateEngine: require('swig'),
+		  //   		templateName: 'book-added'
+		  //   	}).send({
+				// 	to: locals.book.email,
+				// 	from: {
+				// 		name: 'A Thousand and One Books',
+				// 		email: 'librarian@athousandandonebooks.com'
+				// 	},
+				// 	subject: 'Confirmation of your book being added to A Thousand and One Books',
+				// 	book: req.body.token
+				// }, function(err, res) {
+				// 	if (err) console.error(err);
+				// });				
 			}
 			next();
 		});
