@@ -1,0 +1,41 @@
+{
+  "name": "books-1001",
+  "scripts": {
+  },
+  "env": {
+    "API_SECRET": {
+      "required": true
+    },
+    "CLOUDINARY_URL": {
+      "required": true
+    },
+    "COOKIE_SECRET": {
+      "required": true
+    },
+    "MAILGUN_API_KEY": {
+      "required": true
+    },
+    "MAILGUN_DOMAIN": {
+      "required": true
+    },
+    "MANDRILL_API_KEY": {
+      "required": true
+    },
+    "MONGO_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
