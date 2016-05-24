@@ -51,19 +51,24 @@ header.home {
 				width: 100%;
 			}
 		}
-		&-1 {
+		&-4 {
 			.book-item {
 				flex-basis: 100%;
 			}
 		}
 		&-3 {
 			.book-item {
-				flex-basis: 33%;
+				flex-basis: 32%;
+				margin-bottom: 20px;
 			}
 		}
-		&-4 {
+		&-1 {
 			.book-item {
 				flex-basis: 24%;
+				margin-bottom: 10px;
+				.donator {
+					display: none;
+				}
 			}
 		}
 	}

@@ -33,7 +33,7 @@
 								<p><img src="/images/book-placeholder.jpg"></p>
 							{% endif %}
 						</a>
-						Donated by {{book.name}}
+						<span class="donator">Donated by {{book.name}}</span>
 					</div>
 			{% endfor %}
 		</div>
