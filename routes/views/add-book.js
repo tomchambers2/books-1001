@@ -12,7 +12,7 @@ var validationSchema = Joi.object().keys({
     name: Joi.string().required().options({ language: { any: { empty: 'must be filled in' }, label: 'Name' } }),
     title: Joi.string().required().options({ language: { any: { empty: 'must be filled in' }, label: 'Title' } }),
     author: Joi.string().allow(''),
-    dedication: Joi.string().max(100).required().options({ language: { any: { empty: 'must be filled in', }, label: 'Dedication' } })
+    dedication: Joi.string().required().options({ language: { any: { empty: 'must be filled in', }, label: 'Dedication' } })
 });
 
 exports = module.exports = function(req, res) {
