@@ -42,6 +42,7 @@ exports = module.exports = function(app) {
 	app.all('/recover', routes.views.recover);
 	app.all('/link-by-email', routes.views['link-by-email']);
 	app.get('/export-books', routes.api['export-books']);
+	app.get('/info', routes.views.info);
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
