@@ -13,7 +13,7 @@
 			</div>
 			<div class="buttons">
 				<ul class="links">
-					<li>Info</li>
+					<li><a href="/info">Info</a></li>
 					<li>Search</li>
 				</ul>
 {# 				<ul class="buttons">
