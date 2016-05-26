@@ -81,3 +81,64 @@ hr {
   color: #fff;
   padding: 30px;
   width: 100%; }
+<<<<<<< 63218e0c900442e42bc777ca80ac9ab657708cd4
+=======
+
+header.home {
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between; }
+  header.home .title {
+    display: block;
+    margin-bottom: 11px; }
+  header.home .buttons {
+    display: flex; }
+  header.home ul {
+    display: flex;
+    list-style: none;
+    margin: 0; }
+    header.home ul a {
+      text-decoration: none;
+      color: #000; }
+  header.home ul.links li {
+    padding: 0 10px;
+    justify-content: flex-start;
+    line-height: 14px; }
+  header.home ul.buttons {
+    cursor: pointer;
+    font-size: 56px;
+    margin: 0;
+    line-height: 18px; }
+    header.home ul.buttons .disabled {
+      cursor: default;
+      color: #7F7F7F; }
+
+.home-content {
+  width: 730px;
+  margin: auto;
+  font-size: 14px; }
+  .home-content .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px; }
+    .home-content .books .donator {
+      margin-top: 10px;
+      display: inline-block; }
+    .home-content .books .book-item {
+      flex-basis: 355px;
+      padding-bottom: 36px; }
+      .home-content .books .book-item img {
+        width: 100%; }
+    .home-content .books-4 .book-item {
+      flex-basis: 100%; }
+    .home-content .books-3 .book-item {
+      flex-basis: 230px; }
+    .home-content .books-1 .book-item {
+      flex-basis: 167.5px;
+      padding-bottom: 40px; }
+      .home-content .books-1 .book-item .donator {
+        display: none; }
+>>>>>>> improve design based on billys spec

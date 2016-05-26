@@ -28,9 +28,9 @@
 					<div class="book-item">
 						<a href="./{{ book.number }}">
 							{% if book.image.exists %}
-								<p><img src="{{ book._.image.thumbnail(100,100) }}"></p>
+								<img src="{{ book._.image.thumbnail(100,100) }}">
 							{% else %}
-								<p><img src="/images/book-placeholder.jpg"></p>
+								<img src="/images/book-placeholder.jpg">
 							{% endif %}
 						</a>
 						<span class="donator">Donated by {{book.name}}</span>

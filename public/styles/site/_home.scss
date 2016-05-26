@@ -1,12 +1,13 @@
 header.home {
-	margin-top: 25px;
-	margin-bottom: 40px;
+	color: #000;
+	margin-top: 30px;
+	margin-bottom: 48px;
 	display: flex;
 	justify-content: space-between;
 
 	.title {
 		display: block;
-		margin-bottom: 7px;
+		margin-bottom: 11px;
 	}
 	.buttons {
 		display: flex;
@@ -18,6 +19,7 @@ header.home {
 			text-decoration: none;
 			color: #000;
 		}
+		margin: 0;
 	}
 	ul.links {
 		li {
@@ -30,7 +32,7 @@ header.home {
 		cursor: pointer;
 		font-size: 56px;
 		margin: 0;
-		line-height: 40px;
+		line-height: 18px;
 		.disabled {
 			cursor: default;
 			color: #7F7F7F;
@@ -39,7 +41,7 @@ header.home {
 }
 
 .home-content {
-	width: 720px;
+	width: 730px;
 	margin: auto;
 	font-size: 14px;
 
@@ -48,9 +50,13 @@ header.home {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: 100px;
+		.donator {
+			margin-top: 10px;
+			display: inline-block;
+		}
 		.book-item {
-			flex-basis: 48.5%;
-			margin-bottom: 60px;
+			flex-basis: 355px;
+			padding-bottom: 36px;
 			img {
 				width: 100%;
 			}
@@ -62,14 +68,13 @@ header.home {
 		}
 		&-3 {
 			.book-item {
-				flex-basis: 32%;
-				margin-bottom: 20px;
+				flex-basis: 230px;
 			}
 		}
 		&-1 {
 			.book-item {
-				flex-basis: 24%;
-				margin-bottom: 10px;
+				flex-basis: 167.5px;
+				padding-bottom: 40px;
 				.donator {
 					display: none;
 				}
