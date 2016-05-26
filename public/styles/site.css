@@ -69,3 +69,10 @@ hr {
   border: 0;
   height: 1px;
   background: #333; }
+
+#flash-messages {
+  position: fixed;
+  background: #ff5555;
+  color: #fff;
+  padding: 30px;
+  width: 100%; }
