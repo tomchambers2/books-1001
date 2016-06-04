@@ -3,11 +3,17 @@ var Book = keystone.list('Book');
 var Comment = keystone.list('Comment');
 var randtoken = require('rand-token');
 
+function pad(num, size) {
+    var s = num+"";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
 exports = module.exports = function(req, res) {
-	
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	
+
 	// Set locals
 	locals.section = 'book';
 
@@ -28,8 +34,7 @@ exports = module.exports = function(req, res) {
 		var handler = comment.getUpdateHandler(req);
 		handler.process(req.body, {}, function(err) {
 			if (err) {
-				commentValidationErrors = err.errors;
-				console.log(err.errors)
+				locals.commentValidationErrors = err.errors;
 			} else {
 				req.flash('success', 'Your comment was added. Please check your email to confirm.');
 				locals.commentAdded = true;
@@ -49,11 +54,11 @@ exports = module.exports = function(req, res) {
 					book: locals.book
 				}, function(err, res) {
 					if (err) console.error(err);
-				});				
+				});
 			}
 			next();
 		});
-		
+
 	});
 
 	view.on('get', { confirm: 'comment' }, function(next) {
@@ -79,13 +84,12 @@ exports = module.exports = function(req, res) {
 			}
 
 			locals.book = result;
+			locals.paddedBookNumber = pad(result.number, 4);
 
 			Comment.model.find({
 				bookId: result._id,
 				confirmed: true
 			}).exec(function(err, result) {
-				// if (err) ???
-				console.log(result)
 				locals.comments = result;
 
 				next(err);
