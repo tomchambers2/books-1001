@@ -12,7 +12,7 @@ exports = module.exports = function(req, res) {
 
 	view.on('init', function(next) {
 		Book.model.find({
-			title: { $exists: true }
+			title: { $exists: true, $ne: "" }
 		}).exec().then(function(result) {
 			locals.books = result;
 			next();

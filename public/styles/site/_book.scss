@@ -1,0 +1,24 @@
+.book {
+  p {
+    padding: 7.5px 0;
+  }
+  margin-top: -30px;
+  font-size: 20px;
+  .highlight {
+    color: #ff0000;
+  }
+  .comments {
+    margin: 50px 0;
+  }
+  .columns {
+    margin-top: 25px;
+    display: flex;
+    .left {
+      flex-basis: 60%;
+    }
+    .right {
+      text-align: center;
+    }
+  }
+  margin-bottom: 80px;
+}
