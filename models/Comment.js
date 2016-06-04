@@ -1,7 +1,9 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-var Comment = new keystone.List('Comment');
+var Comment = new keystone.List('Comment', {
+	track: true
+});
 
 Comment.add({
 	bookId: { type: Types.Text },

@@ -5,7 +5,8 @@ var Types = keystone.Field.Types;
 autoIncrement.initialize(keystone.mongoose.connections[0]);
 
 var Book = new keystone.List('Book', {
-	defaultSort: 'number'
+	defaultSort: 'number',
+	track: true
 });
 
 Book.add({
