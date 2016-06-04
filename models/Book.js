@@ -17,6 +17,7 @@ Book.add({
 	name: { type: Types.Text, initial: true },
 	dedication: { type: Types.Textarea, initial: true },
 	image: { type: Types.CloudinaryImage },
+	realCover: { type: Types.CloudinaryImage },
 	lastUpdated: { type: Types.Text }
 });
 
