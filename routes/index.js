@@ -38,7 +38,7 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.all('/:number([0-9]{1,5})', routes.views.book);
 	app.post('/create-user', routes.api['create-user']);
-	app.get('/load-books', routes.api['load-books']);
+	app.get('/load-books/:skip', routes.api['load-books']);
 	app.all('/add-book/:token([a-zA-Z0-9]{16})', routes.views['add-book']);
 	app.all('/recover', routes.views.recover);
 	app.all('/link-by-email', routes.views['link-by-email']);

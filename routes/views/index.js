@@ -13,7 +13,10 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next) {
 		Book.model.find({
 			title: { $exists: true, $ne: "" }
-		}).exec().then(function(result) {
+		})
+		.sort('-number')
+		.skip(req.params.skip)
+		.exec().then(function(result) {
 			locals.books = result;
 			next();
 		}, function(err) {

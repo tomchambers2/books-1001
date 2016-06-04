@@ -15,10 +15,11 @@ exports = module.exports = function(req, res) {
 		Book.model.find({
 			title: { $exists: true, $ne: "" }
 		})
-		.sort('lastUpdated')
+		.sort('-number')
+    .skip(req.params.skip)
 		.exec(function(err, books) {
 			if (!books.length) {
-				return res.status(404).send({ success: false, message: 'No more books' });
+				return res.json([]);
 			}
       res.json(books);
 		});
