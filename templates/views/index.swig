@@ -27,13 +27,15 @@
 		<div class="books">
 			{% for book in books %}
 					<div class="book-item">
+						<div class="book-image">
 						<a href="./{{ book.number }}">
 							{% if book.image.exists %}
 								<img src="{{ book._.image.fill(355, 355) }}">
 							{% else %}
-								<img src="/images/book-placeholder.jpg">
+								<div class="book-placeholder"></div>
 							{% endif %}
 						</a>
+						</div>
 						<span class="donator">Donated by {{book.name}}</span>
 					</div>
 			{% endfor %}

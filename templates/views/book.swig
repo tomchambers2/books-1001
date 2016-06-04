@@ -30,7 +30,9 @@
 		</header>
 
 	<section class="book">
-		<img src="{{ book._.image.fit(715,507) }}" width="715">
+		{% if book.image %}
+			<img src="{{ book._.image.fit(715,507) }}" width="715">
+		{% endif %}
 
 		<div class="columns">
 			<div class="left">

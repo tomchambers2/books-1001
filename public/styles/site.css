@@ -129,9 +129,17 @@ header.home {
       display: inline-block; }
     .home-content .books .book-item {
       flex-basis: 355px;
-      padding-bottom: 36px; }
+      padding-bottom: 36px;
+      display: flex;
+      flex-flow: column;
+      position: relative; }
       .home-content .books .book-item img {
-        width: 100%; }
+        width: 100%;
+        display: block; }
+      .home-content .books .book-item .book-image {
+        background: #DCDCDC;
+        flex: 1;
+        flex-basis: auto; }
     .home-content .books-4 .book-item {
       flex-basis: 100%; }
     .home-content .books-2 .book-item {

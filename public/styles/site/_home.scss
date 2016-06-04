@@ -59,6 +59,15 @@ header.home {
 			padding-bottom: 36px;
 			img {
 				width: 100%;
+				display:block;
+			}
+			display: flex;
+			flex-flow: column;
+			position: relative;
+			.book-image {
+				background: #DCDCDC;
+				flex: 1;
+				flex-basis: auto;
 			}
 		}
 		&-4 {
