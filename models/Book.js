@@ -9,7 +9,8 @@ var Book = new keystone.List('Book', {
 });
 
 Book.add({
-	number: { type: Types.Number },
+	manualNumberAssign: { type: Types.Boolean, initial: true },
+	number: { type: Types.Number, initial: true, dependsOn: { manualNumberAssign: true } },
 	email: { type: Types.Email, initial: true, index: true, unique: true },
 	token: { type: Types.Text },
 	title: { type: Types.Text, initial: true },
@@ -23,6 +24,6 @@ Book.add({
 
 Book.defaultColumns = 'number, title, author, name, email';
 
-Book.schema.plugin(autoIncrement.plugin, { model: 'Book', field: 'number', startAt: 1 });
+Book.schema.plugin(autoIncrement.plugin, { model: 'Book', field: 'number', startAt: 1, skipBy: 'manualNumberAssign' });
 
 Book.register();
