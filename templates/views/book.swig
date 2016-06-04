@@ -10,7 +10,7 @@
 	<h2>{{book.title}} by {{book.author}}</h2>
 
 	<p>
-		<img src="{{ book._.image.fit(500,600) }}">
+		<img src="{{ book._.image.fit(715,507) }}" width="715">
 	</p>
 
 	<h1>Comments</h1>

@@ -28,7 +28,7 @@
 					<div class="book-item">
 						<a href="./{{ book.number }}">
 							{% if book.image.exists %}
-								<img src="{{ book._.image.thumbnail(100,100) }}">
+								<img src="{{ book._.image.fill(355, 355) }}">
 							{% else %}
 								<img src="/images/book-placeholder.jpg">
 							{% endif %}
