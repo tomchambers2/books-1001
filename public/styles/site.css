@@ -92,7 +92,7 @@ header.home {
   justify-content: space-between; }
   header.home .title {
     display: block;
-    margin-bottom: 11px; }
+    margin-bottom: 5px; }
   header.home .buttons {
     display: flex; }
   header.home ul {
