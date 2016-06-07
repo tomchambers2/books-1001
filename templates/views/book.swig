@@ -31,7 +31,10 @@
 
 	<section class="book">
 		{% if book.image %}
+		<div class="cover">
 			<img src="{{ book._.image.fit(715,507) }}" width="715">
+			<img src="{{ book._.realCover.fit(715,507) }}" width="715">
+		</div>
 
 		{% endif %}
 

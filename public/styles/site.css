@@ -48,7 +48,7 @@ label {
 
 input, textarea {
   display: block;
-  width: 100%;
+  width: 90%;
   font-style: italic;
   color: #C4C4C4;
   font-size: 20px;
@@ -158,6 +158,14 @@ header.home {
 .book {
   font-size: 20px;
   margin-bottom: 80px; }
+  .book .cover img:last-child {
+    display: none; }
+  .book .cover:hover img:first-child {
+    display: none; }
+  .book .cover:hover img:last-child {
+    display: inline-block; }
+  .book .cover * {
+    transition: 1s; }
   .book p {
     padding: 7.5px 0; }
   .book .highlight {
