@@ -83,8 +83,6 @@ hr {
   color: #fff;
   padding: 30px;
   width: 100%; }
-<<<<<<< 63218e0c900442e42bc777ca80ac9ab657708cd4
-=======
 
 header.home {
   color: #000;
@@ -155,16 +153,7 @@ header.home {
       flex-basis: 167.5px;
       padding-bottom: 40px; }
       .home-content .books-4 .book-item .book-image {
-<<<<<<< eba0a1de974a3f944a8a13fabe3b9aaceb32c84c
-        min-height: 112px; }
-      .home-content .books-4 .book-item .donator {
-        display: none; }
-<<<<<<< 2c29bee146a93de8183768e344fd73710c1c51e1
->>>>>>> improve design based on billys spec
-=======
-=======
         min-height: 118px; }
->>>>>>> add back donated by
 
 .book {
   font-size: 20px;
@@ -180,11 +169,6 @@ header.home {
     display: flex; }
     .book .columns .left {
       flex-basis: 60%; }
-<<<<<<< 3e79dc6c3c6137b194332c41bdba3e981aa97748
-    .book .columns .right {
-      text-align: center; }
->>>>>>> book detail page styled
-=======
     .book .columns .right i {
       font-size: 40px;
       margin-top: 8px;
@@ -194,4 +178,3 @@ header.home {
       text-decoration: none; }
     .book .columns .right a:visited {
       color: #000; }
->>>>>>> add sharing buttons
