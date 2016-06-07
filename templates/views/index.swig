@@ -15,7 +15,7 @@
 			<div class="buttons">
 				<ul class="links">
 					<li><a href="/info">Info</a></li>
-					<li>Search</li>
+					{# <li>Search</li> #}
 				</ul>
 				<ul class="buttons">
 					<li class="minus">⊖</li>
