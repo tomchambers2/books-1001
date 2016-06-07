@@ -27,6 +27,8 @@
 			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+		<link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+
 		{# Include template-specific stylesheets by extending the css block #}
 		{%- block css %}{% endblock -%}
 

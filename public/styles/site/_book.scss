@@ -16,7 +16,18 @@
       flex-basis: 60%;
     }
     .right {
-      text-align: center;
+      i {
+        font-size: 40px;
+        margin-top: 8px;
+        margin-right: 12px;
+      }
+      a{
+        color: #000;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #000;
+      }
     }
   }
   margin-bottom: 80px;

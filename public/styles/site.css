@@ -180,6 +180,18 @@ header.home {
     display: flex; }
     .book .columns .left {
       flex-basis: 60%; }
+<<<<<<< 3e79dc6c3c6137b194332c41bdba3e981aa97748
     .book .columns .right {
       text-align: center; }
 >>>>>>> book detail page styled
+=======
+    .book .columns .right i {
+      font-size: 40px;
+      margin-top: 8px;
+      margin-right: 12px; }
+    .book .columns .right a {
+      color: #000;
+      text-decoration: none; }
+    .book .columns .right a:visited {
+      color: #000; }
+>>>>>>> add sharing buttons

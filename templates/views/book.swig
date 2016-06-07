@@ -89,6 +89,15 @@
 			</div>
 			<div class="right">
 				<p>Share</p>
+				<a target="_blank" href="https://twitter.com/intent/tweet?text=I%20found%20this%20book%20on%20athousandandonebooks.com&url=http%3A%2F%2Fathousandandonebooks.com%2F{{book.number}}">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a target="_blank" href="http://www.facebook.com/sharer.php?u=http://athousandandonebooks.com/{{book.number}}&t=I%20found%20this%20book%20on%20athousandandonebooks.com">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a target="_blank" href="mailto:?body=http://athousandandonebooks.com/{{book.number}}&subject=I%20want%20to%20share%20this%20book%20with%20you">
+					<i class="fa fa-reply" aria-hidden="true"></i>
+				</a>
 			</div>
 		</div>
 	</div>
