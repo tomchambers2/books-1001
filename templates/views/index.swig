@@ -30,7 +30,7 @@
 						<div class="book-image">
 						<a href="./{{ book.number }}">
 							{% if book.image.exists %}
-								<img src="{{ book._.image.fill(355, 355) }}">
+								<img src="{{ book._.image.fill(730) }}">
 							{% else %}
 								<div class="book-placeholder"></div>
 							{% endif %}
