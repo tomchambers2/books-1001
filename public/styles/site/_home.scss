@@ -50,6 +50,9 @@ header.home {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin-bottom: 100px;
+		.book-placeholder {
+			height: 100%;
+		}
 		.donator {
 			margin-top: 10px;
 			display: inline-block;

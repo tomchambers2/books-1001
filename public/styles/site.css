@@ -124,6 +124,8 @@ header.home {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 100px; }
+    .home-content .books .book-placeholder {
+      height: 100%; }
     .home-content .books .donator {
       margin-top: 10px;
       display: inline-block; }
@@ -140,7 +142,7 @@ header.home {
         background: #DCDCDC;
         flex: 1;
         flex-basis: auto;
-        min-height: 237px; }
+        min-height: 230px; }
     .home-content .books-1 .book-item {
       flex-basis: 100%; }
       .home-content .books-1 .book-item .book-image {
@@ -148,12 +150,12 @@ header.home {
     .home-content .books-3 .book-item {
       flex-basis: 230px; }
       .home-content .books-3 .book-item .book-image {
-        min-height: 163px; }
+        min-height: 154px; }
     .home-content .books-4 .book-item {
       flex-basis: 167.5px;
       padding-bottom: 40px; }
       .home-content .books-4 .book-item .book-image {
-        min-height: 118px; }
+        min-height: 110px; }
 
 .book {
   font-size: 20px;
@@ -176,7 +178,8 @@ header.home {
     margin-top: 25px;
     display: flex; }
     .book .columns .left {
-      flex-basis: 60%; }
+      flex-basis: 60%;
+      margin-right: 70px; }
     .book .columns .right i {
       font-size: 40px;
       margin-top: 8px;
