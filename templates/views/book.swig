@@ -23,8 +23,8 @@
 					{# <li>Search</li> #}
 				</ul>
 				<ul class="buttons">
-					<li class="minus">⊖</li>
-					<li class="plus">⊕</li>
+					<a href="/#book-{{book.number}}"><li class="minus">⊖</li></a>
+					<li class="plus disabled">⊕</li>
 				</ul>
 			</div>
 		</header>

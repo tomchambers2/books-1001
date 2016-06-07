@@ -26,6 +26,7 @@
 
 		<div class="books">
 			{% for book in books %}
+					<a name="book-{{book.number}}">
 					<div class="book-item">
 						<div class="book-image">
 						<a href="./{{ book.number }}">
