@@ -68,22 +68,31 @@ header.home {
 				background: #DCDCDC;
 				flex: 1;
 				flex-basis: auto;
-				min-height: 50px;
+				min-height: 154px;
 			}
 		}
 		&-1 {
 			.book-item {
 				flex-basis: 100%;
+				.book-image {
+					min-height: 489px;
+				}
 			}
 		}
 		&-3 {
 			.book-item {
 				flex-basis: 230px;
+				.book-image {
+					min-height: 237px;
+				}
 			}
 		}
 		&-4 {
 			.book-item {
 				flex-basis: 167.5px;
+				.book-image {
+					min-height: 112px;
+				}
 				padding-bottom: 40px;
 				.donator {
 					display: none;

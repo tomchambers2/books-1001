@@ -139,14 +139,20 @@ header.home {
         background: #DCDCDC;
         flex: 1;
         flex-basis: auto;
-        min-height: 50px; }
+        min-height: 154px; }
     .home-content .books-1 .book-item {
       flex-basis: 100%; }
+      .home-content .books-1 .book-item .book-image {
+        min-height: 489px; }
     .home-content .books-3 .book-item {
       flex-basis: 230px; }
+      .home-content .books-3 .book-item .book-image {
+        min-height: 237px; }
     .home-content .books-4 .book-item {
       flex-basis: 167.5px;
       padding-bottom: 40px; }
+      .home-content .books-4 .book-item .book-image {
+        min-height: 112px; }
       .home-content .books-4 .book-item .donator {
         display: none; }
 <<<<<<< 2c29bee146a93de8183768e344fd73710c1c51e1
