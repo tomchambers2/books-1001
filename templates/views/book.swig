@@ -15,7 +15,7 @@
 		<header class="home">
 			<div class="masthead">
 				<span class="title">The Empathy Museum presents</span>
-				<img src="/images/empathy-museum-black.jpg" width="292" height="77">
+				<a href="/"><img src="/images/empathy-museum-black.jpg" width="292" height="77"></a>
 			</div>
 			<div class="buttons">
 				<ul class="links">
