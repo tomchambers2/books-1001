@@ -33,7 +33,11 @@
 		{% if book.image %}
 		<div class="cover">
 			<img src="{{ book._.image.fit(715,507) }}" width="715">
-			<img src="{{ book._.realCover.fit(715,507) }}" width="715">
+			{% if book.realCover.url %}
+				<img src="{{ book._.realCover.fit(715,507) }}" width="715">
+			{% else %}
+				<img src="{{ book._.image.fit(715,507) }}" width="715">
+			{% endif %}
 		</div>
 
 		{% endif %}
