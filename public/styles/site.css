@@ -152,12 +152,16 @@ header.home {
       flex-basis: 167.5px;
       padding-bottom: 40px; }
       .home-content .books-4 .book-item .book-image {
+<<<<<<< eba0a1de974a3f944a8a13fabe3b9aaceb32c84c
         min-height: 112px; }
       .home-content .books-4 .book-item .donator {
         display: none; }
 <<<<<<< 2c29bee146a93de8183768e344fd73710c1c51e1
 >>>>>>> improve design based on billys spec
 =======
+=======
+        min-height: 118px; }
+>>>>>>> add back donated by
 
 .book {
   font-size: 20px;
