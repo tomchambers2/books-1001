@@ -14,25 +14,47 @@
 			<div class="buttons">
 				<ul class="links">
 					<li><a href="/info">Info</a></li>
-					<li>Search</li>
+					{# <li>Search</li> #}
 				</ul>
-{# 				<ul class="buttons">
-					<li class="minus">⊖</li>
-					<li class="plus">⊕</li>
-				</ul> #}
+ 				<ul class="buttons">
+					<li class="minus disabled">⊖</li>
+					<li class="plus disabled">⊕</li>
+				</ul>
 			</div>
 		</header>
 
 		<div class="content info">
-			<p>Do you have a book — one you absolutely love — that you would like to share with someone you have never met?</p>
-			<p>The Empathy Museum is asking 1001 people to donate a favourite book to its brand new library.</p>
-			<p>To take part donate £10. We will email you a form where you can tell us your book and the reason that you chose it. With the money, we will buy the book from an independent bookshop and your name and dedication will appear on the inside cover.</p>
-			<p>Visitors to the library can take out the book and go online to share where they read it and what they thought about it. You will be able to track your book’s journey through our website as it is borrowed, read and passed on from one reader to another.</p>
-			<p>‘A Thousand and One Books’ will open in June as part of LIFT 2016  and will then tour in the UK and internationally.</p>
-			<p>Donate £10 today and make your book part of this unique pop-up library.</p>
+		<p>
+			This is a library that will be filled with a thousand and one books, each one donated by someone who loves that book and thinks that other people might love it too.
+		</p>
+		<p>
+			On this website you can browse all of the books that have been given and read the personal dedications from the donors.
+		</p>
+		<p>
+			Each book is available to take out and pass on from our physical “A Thousand and One Books Library” which is currently open on Greenwich Peninsula until July  2nd as part of LIFT 16
+		</p>
+		<p>
+			<b>If you have given a book</b><br>
+			Each book has a unique number which you have been sent and is trackable here. You can see who has read and is reading it and follow its journey around the world.
+		</p>
+		<p>
+			<b>If you have borrowed a book</b><br>
+			Please add your comments and tell us what you thought and where you read it.
+		</p>
+		<p>
+			<b>To give a book</b><br>
+			To give your favourite book through our crowdsourcing campaign please <a href="https://www.fundsurfer.com/project/a-thousand-and-one-books">donate here</a>.
+		</p>
+		<p>
+			<b>Contact</b><br>
+			<a href="mailto:librarian@athousandandonebooks.com">librarian@athousandandonebooks.com</a>
+		</p>
+		<p>
+			<a href="http://www.empathymuseum.com">www.empathymuseum.com</a>
+		</p>
 
-			<img src="/images/empathy-museum-logo.png" class="logo">
-			<p>The Empathy Museum is a participatory art project dedicated to helping us look at the world through other people’s eyes in order to help transform our personal relationships and tackle prejudice. We tour our exhibits nationally and internationally.</p>
+{# 			<img src="/images/empathy-museum-logo.png" class="logo">
+			<p>The Empathy Museum is a participatory art project dedicated to helping us look at the world through other people’s eyes in order to help transform our personal relationships and tackle prejudice. We tour our exhibits nationally and internationally.</p> #}
 
 			{% include "./partials/footer.swig" %}
 		</div>
