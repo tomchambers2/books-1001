@@ -25,18 +25,23 @@ function fixLastRow(size) {
 	}
 }
 
+function scaleToDevice() {
+	if ($(this).width() < 414) {
+		updateSize(1);
+	} else if ($(this).width() < 768) {
+		updateSize(2);
+	} else {
+		updateSize(4);
+	}
+}
+
 $(document).on('ready', function() {
 	var size = 2;
 
 	fixLastRow(size);
 
-	$(window).on('resize', function() {
-		if ($(this).width() < 768) {
-			updateSize(4);
-		} else {
-			updateSize(2);
-		}
-	});
+	scaleToDevice();
+	$(window).on('resize', scaleToDevice);
 
 	$('.plus').on('click', function() {
 		size--;
