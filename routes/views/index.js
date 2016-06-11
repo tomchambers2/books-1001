@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
 		Book.model.find({
 			title: { $exists: true, $ne: "" }
 		})
-		.sort('-number')
+		.sort('number')
 		.skip(req.params.skip)
 		.exec().then(function(result) {
 			locals.books = result;
