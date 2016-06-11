@@ -1,0 +1,7 @@
+.cover img { display: block }
+.cover img:last-child{display:none}
+.cover:hover img:first-child{display:none}
+.cover:hover img:last-child{display:block}
+.cover * {
+  transition: 1s;
+}

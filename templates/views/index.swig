@@ -31,7 +31,14 @@
 						<a href="./{{ book.number }}" class="book-image">
 						{#<a href="./{{ book.number }}">#}
 							{% if book.image.exists %}
-								<img src="{{ book._.image.fill(730) }}">
+								<div class="cover">
+									<img src="{{ book._.image.fill(730) }}">
+									{% if book.realCover.url %}
+										<img src="{{ book._.realCover.fill(730) }}" width="715">
+									{% else %}
+										<img src="{{ book._.image.fill(730) }}" width="715">
+									{% endif %}
+								</div>
 							{% else %}
 								<div class="book-placeholder"></div>
 							{% endif %}

@@ -1,11 +1,4 @@
 .book {
-  .cover img:last-child{display:none}
-  .cover:hover img:first-child{display:none}
-  .cover:hover img:last-child{display:inline-block}
-  .cover * {
-    transition: 1s;
-  }
-
   p {
     padding: 7.5px 0;
   }

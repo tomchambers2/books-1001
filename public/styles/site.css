@@ -136,13 +136,27 @@ header.home {
       flex-flow: column;
       position: relative; }
       .home-content .books .book-item img {
-        width: 100%;
-        display: block; }
+        width: 100%; }
       .home-content .books .book-item .book-image {
-        background: #DCDCDC;
+        background: #EEEEEE;
         flex: 1;
         flex-basis: auto;
         min-height: 230px; }
+      .home-content .books .book-item .book-placeholder:before {
+        font-size: 18px;
+        color: #585858;
+        content: 'Coming soon';
+        margin: auto;
+        width: 80%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: block;
+        line-height: 50px;
+        height: 50px; }
     .home-content .books-1 .book-item {
       flex-basis: 100%; }
       .home-content .books-1 .book-item .book-image {
@@ -160,14 +174,6 @@ header.home {
 .book {
   font-size: 20px;
   margin-bottom: 80px; }
-  .book .cover img:last-child {
-    display: none; }
-  .book .cover:hover img:first-child {
-    display: none; }
-  .book .cover:hover img:last-child {
-    display: inline-block; }
-  .book .cover * {
-    transition: 1s; }
   .book p {
     padding: 7.5px 0; }
   .book .highlight {
@@ -189,3 +195,18 @@ header.home {
       text-decoration: none; }
     .book .columns .right a:visited {
       color: #000; }
+
+.cover img {
+  display: block; }
+
+.cover img:last-child {
+  display: none; }
+
+.cover:hover img:first-child {
+  display: none; }
+
+.cover:hover img:last-child {
+  display: block; }
+
+.cover * {
+  transition: 1s; }
