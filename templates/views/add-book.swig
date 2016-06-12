@@ -26,7 +26,7 @@
 					<label for="author">Author</label>
 					<input type="text" id="author" name="author" value="{{formData.author}}" placeholder="Name of author">
 					<label for="dedication">I am giving this book because...</label>
-					<textarea name="dedication" id="dedication" cols="30" rows="10" placeholder="(in 100 words or less)" maxlength="100">{{formData.dedication}}</textarea>
+					<textarea name="dedication" id="dedication" cols="30" rows="10" placeholder="(in 100 words or less)">{{formData.dedication}}</textarea>
 					<button type="submit">Submit</button>
 				</form>
 
