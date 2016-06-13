@@ -204,7 +204,7 @@ header.home {
 
 @media screen and (max-width: 768px) {
   .book .columns {
-    flex-direction: column; }
+    display: block; }
     .book .columns .left {
       flex-basis: 100%; } }
 
