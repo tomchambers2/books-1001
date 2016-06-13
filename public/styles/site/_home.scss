@@ -40,8 +40,15 @@ header.home {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	// header.home {
+	// 	flex-direction: column;
+	// }
+
+}
+
 .home-content {
-	width: 730px;
+	width: 60%;
 	margin: auto;
 	font-size: 14px;
 
@@ -58,7 +65,7 @@ header.home {
 			display: inline-block;
 		}
 		.book-item {
-			flex-basis: 355px;
+			flex-basis: 48.5%;
 			padding-bottom: 36px;
 			img {
 				width: 100%;
@@ -67,10 +74,13 @@ header.home {
 			flex-flow: column;
 			position: relative;
 			.book-image {
-				background: #EEEEEE;
+				// background: #EEEEEE;
 				flex: 1;
 				flex-basis: auto;
-				min-height: 230px;
+				// min-height: 230px;
+				.cover {
+					background: #EEEEEE;
+				}
 			}
 			.book-placeholder:before {
 				font-size: 18px;
@@ -92,27 +102,33 @@ header.home {
 		&-1 {
 			.book-item {
 				flex-basis: 100%;
-				.book-image {
-					min-height: 489px;
-				}
+				// .book-image {
+				// 	// min-height: 489px;
+				// }
 			}
 		}
 		&-3 {
 			.book-item {
-				flex-basis: 230px;
-				.book-image {
-					min-height: 154px;
-				}
+				flex-basis: 31.5%;
+				// .book-image {
+				// 	// min-height: 154px;
+				// }
 			}
 		}
 		&-4 {
 			.book-item {
-				flex-basis: 167.5px;
-				.book-image {
-					min-height: 110px;
-				}
+				flex-basis: 23%;
+				// .book-image {
+				// 	// min-height: 110px;
+				// }
 				padding-bottom: 40px;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home-content {
+			width: 90%;
 	}
 }

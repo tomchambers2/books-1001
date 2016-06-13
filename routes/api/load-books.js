@@ -15,8 +15,9 @@ exports = module.exports = function(req, res) {
 		Book.model.find({
 			title: { $exists: true, $ne: "" }
 		})
-		.sort('-number')
+		.sort('number')
     .skip(req.params.skip)
+    .limit(20)
 		.exec(function(err, books) {
 			if (!books.length) {
 				return res.json([]);

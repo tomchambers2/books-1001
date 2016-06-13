@@ -15,7 +15,7 @@ exports = module.exports = function(req, res) {
 			title: { $exists: true, $ne: "" }
 		})
 		.sort('number')
-		.skip(req.params.skip)
+		.limit(20)
 		.exec().then(function(result) {
 			locals.books = result;
 			next();

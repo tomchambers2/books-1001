@@ -1,9 +1,5 @@
 {% extends "../layouts/default.swig" %}
 
-{% block js %}
-	<script src="/js/book-resize.js"></script>
-{% endblock %}
-
 {% block content %}
 	<div class="home-content">
 		<header class="home">

@@ -19,7 +19,13 @@ footer {
 .content {
 	margin-left: 7px;
 	padding-top: 13px;
-	width: 458px;
+	width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;  
+  }
 }
 
 .content.info {

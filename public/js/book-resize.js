@@ -1,7 +1,9 @@
 var min = 1;
 var max = 4;
+var size;
 
 function updateSize(size) {
+	size = size;
 	$('.plus').removeClass('disabled');
 	$('.minus').removeClass('disabled');
 	if (size == min) {
@@ -26,17 +28,17 @@ function fixLastRow(size) {
 }
 
 function scaleToDevice() {
-	if ($(this).width() < 414) {
-		updateSize(1);
-	} else if ($(this).width() < 768) {
-		updateSize(2);
+	if ($(this).width() < 768) {
+		size = 1;
+		updateSize(size);
 	} else {
-		updateSize(4);
+		size = 2;
+		updateSize(size);
 	}
 }
 
 $(document).on('ready', function() {
-	var size = 2;
+	size = 2;
 
 	fixLastRow(size);
 

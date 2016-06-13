@@ -1,4 +1,7 @@
 .book {
+  .main-cover img {
+    width: 100%
+  }
   p {
     padding: 7.5px 0;
   }
@@ -32,4 +35,15 @@
     }
   }
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+	.book {
+    .columns {
+      flex-direction: column;
+      .left {
+        flex-basis: 100%;
+      }
+    }
+  }
 }

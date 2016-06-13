@@ -15,7 +15,11 @@ footer {
 .content {
   margin-left: 7px;
   padding-top: 13px;
-  width: 458px; }
+  width: 70%; }
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%; } }
 
 .content.info {
   font-size: 20px; }
@@ -116,7 +120,7 @@ header.home {
       color: #7F7F7F; }
 
 .home-content {
-  width: 730px;
+  width: 60%;
   margin: auto;
   font-size: 14px; }
   .home-content .books {
@@ -130,7 +134,7 @@ header.home {
       margin-top: 10px;
       display: inline-block; }
     .home-content .books .book-item {
-      flex-basis: 355px;
+      flex-basis: 48.5%;
       padding-bottom: 36px;
       display: flex;
       flex-flow: column;
@@ -138,10 +142,10 @@ header.home {
       .home-content .books .book-item img {
         width: 100%; }
       .home-content .books .book-item .book-image {
-        background: #EEEEEE;
         flex: 1;
-        flex-basis: auto;
-        min-height: 230px; }
+        flex-basis: auto; }
+        .home-content .books .book-item .book-image .cover {
+          background: #EEEEEE; }
       .home-content .books .book-item .book-placeholder:before {
         font-size: 18px;
         color: #585858;
@@ -159,21 +163,21 @@ header.home {
         height: 50px; }
     .home-content .books-1 .book-item {
       flex-basis: 100%; }
-      .home-content .books-1 .book-item .book-image {
-        min-height: 489px; }
     .home-content .books-3 .book-item {
-      flex-basis: 230px; }
-      .home-content .books-3 .book-item .book-image {
-        min-height: 154px; }
+      flex-basis: 31.5%; }
     .home-content .books-4 .book-item {
-      flex-basis: 167.5px;
+      flex-basis: 23%;
       padding-bottom: 40px; }
-      .home-content .books-4 .book-item .book-image {
-        min-height: 110px; }
+
+@media screen and (max-width: 768px) {
+  .home-content {
+    width: 90%; } }
 
 .book {
   font-size: 20px;
   margin-bottom: 80px; }
+  .book .main-cover img {
+    width: 100%; }
   .book p {
     padding: 7.5px 0; }
   .book .highlight {
@@ -195,6 +199,12 @@ header.home {
       text-decoration: none; }
     .book .columns .right a:visited {
       color: #000; }
+
+@media screen and (max-width: 768px) {
+  .book .columns {
+    flex-direction: column; }
+    .book .columns .left {
+      flex-basis: 100%; } }
 
 .cover img {
   display: block; }
