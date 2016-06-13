@@ -171,7 +171,9 @@ header.home {
 
 @media screen and (max-width: 768px) {
   .home-content {
-    width: 90%; } }
+    width: 90%; }
+  header.home ul.buttons {
+    display: none; } }
 
 .book {
   font-size: 20px;

@@ -131,4 +131,9 @@ header.home {
 	.home-content {
 			width: 90%;
 	}
+	header.home {
+		ul.buttons {
+			display: none;
+		}
+	}
 }

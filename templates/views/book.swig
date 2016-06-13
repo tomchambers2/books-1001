@@ -30,7 +30,7 @@
 		</header>
 
 	<section class="book">
-		{% if book.image %}
+		{% if book.image.url %}
 		<div class="cover main-cover">
 			<img src="{{ book._.image.fit(715,507) }}">
 			{% if book.realCover.url %}
@@ -39,7 +39,6 @@
 				<img src="{{ book._.image.fit(715,507) }}">
 			{% endif %}
 		</div>
-
 		{% endif %}
 
 		<div class="columns">
