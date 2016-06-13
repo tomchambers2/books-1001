@@ -15,7 +15,7 @@ exports = module.exports = function(req, res) {
 			title: { $exists: true, $ne: "" }
 		})
 		.sort('number')
-		.limit(20)
+		// .limit(20)
 		.exec().then(function(result) {
 			locals.books = result;
 			next();
@@ -23,8 +23,6 @@ exports = module.exports = function(req, res) {
 			next(err);
 		});
 	});
-
-	console.log('will render')
 
 	view.render('index');
 };

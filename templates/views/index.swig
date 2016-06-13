@@ -2,7 +2,7 @@
 
 {% block js %}
 	<script src="/js/book-resize.js"></script>
-	<script src="/js/infinite-scroll.js"></script>
+	{#<script src="/js/infinite-scroll.js"></script>#}
 {% endblock %}
 
 {% block content %}
