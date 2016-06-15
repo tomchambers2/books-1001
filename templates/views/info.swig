@@ -34,16 +34,19 @@
 		<p>
 			Each book is available to take out and pass on from our physical “A Thousand and One Books Library” which is currently open on Greenwich Peninsula until July  2nd as part of LIFT 16
 		</p>
+
+		<h1>If you have given a book</h1>
 		<p>
-			<b>If you have given a book</b><br>
 			Each book has a unique number which you have been sent and is trackable here. You can see who has read and is reading it and follow its journey around the world.
 		</p>
+
+		<h1>If you have borrowed a book</h1>
 		<p>
-			<b>If you have borrowed a book</b><br>
 			Please add your comments and tell us what you thought and where you read it.
 		</p>
+
+		<h1>To give a book</h1>
 		<p>
-			<b>To give a book</b><br>
 			To give your favourite book through our crowdsourcing campaign please <a href="https://www.fundsurfer.com/project/a-thousand-and-one-books">donate here</a>.
 		</p>
 		<p>
