@@ -7,7 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<script type="text/javascript" src="//fast.fonts.net/jsapi/673c680f-99a4-498e-8dce-eadea32e016d.js"></script>
+		{# <script type="text/javascript" src="//fast.fonts.net/jsapi/673c680f-99a4-498e-8dce-eadea32e016d.js"></script> #}
+
+		<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/673c680f-99a4-498e-8dce-eadea32e016d.css"/>
 
 		<title>{{ title|default("A Thousand and One Books") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">

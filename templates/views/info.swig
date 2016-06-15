@@ -20,6 +20,11 @@
 		</header>
 
 		<div class="content info">
+	
+		<p>
+			<img src="/images/1001-books-ravensbourne.jpg">
+		</p>
+
 		<p>
 			This is a library that will be filled with a thousand and one books, each one donated by someone who loves that book and thinks that other people might love it too.
 		</p>
