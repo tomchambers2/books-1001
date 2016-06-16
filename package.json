@@ -9,6 +9,7 @@
     "joi": "^8.1.0",
     "keystone": "^0.3.16",
     "keystone-nodemailer": "^0.1.1",
+    "list.js": "^1.2.0",
     "lodash": "^4.11.2",
     "mongoose-auto-increment": "git+https://github.com/kamekazemaster/mongoose-auto-increment.git",
     "node-sass": "^3.3.2",

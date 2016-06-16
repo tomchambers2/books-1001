@@ -40,11 +40,33 @@ header.home {
 	}
 }
 
+.search-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0 40px;
+	font-size: 20px;
+	span {
+		margin-right: 10px;
+	}
+	input#search {
+		width: auto;
+		display: inline-block;
+		flex-grow: 1;
+		height: 20px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	// header.home {
 	// 	flex-direction: column;
 	// }
-
+	.search-box {
+		flex-direction: column;
+		input#search {
+			width: 96%;
+		}
+	}
 }
 
 .home-content {

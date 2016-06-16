@@ -134,6 +134,26 @@ header.home {
       cursor: default;
       color: #7F7F7F; }
 
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 40px;
+  font-size: 20px; }
+  .search-box span {
+    margin-right: 10px; }
+  .search-box input#search {
+    width: auto;
+    display: inline-block;
+    flex-grow: 1;
+    height: 20px; }
+
+@media screen and (max-width: 768px) {
+  .search-box {
+    flex-direction: column; }
+    .search-box input#search {
+      width: 96%; } }
+
 .home-content {
   width: 60%;
   margin: auto;
@@ -237,3 +257,6 @@ header.home {
 
 .cover * {
   transition: 1s; }
+
+.hidden {
+  display: none; }

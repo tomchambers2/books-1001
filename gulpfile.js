@@ -14,6 +14,11 @@ var paths = {
 	'style': {
 		all: './public/styles/**/*.scss',
 		output: './public/styles/'
+	},
+
+	libs: {
+		src: ['./node_modules/list.js/dist/**'],
+		dest: './public/js/lib'
 	}
 
 };
@@ -41,6 +46,11 @@ gulp.task('sass', function(){
 		.pipe(gulp.dest(paths.style.output));
 });
 
+gulp.task('libs', function() {
+	gulp.src(paths.libs.src)
+		.pipe(gulp.dest(paths.libs.dest));
+});
+
 
 gulp.task('runKeystone', shell.task('node keystone.js'));
 gulp.task('watch', [
@@ -50,4 +60,4 @@ gulp.task('watch', [
   'watch:lint'
 ]);
 
-gulp.task('default', ['watch', 'runKeystone']);
+gulp.task('default', ['watch', 'libs', 'runKeystone']);
