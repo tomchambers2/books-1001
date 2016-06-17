@@ -35,10 +35,12 @@
 			<div class="books">
 				{% for book in books %}
 						<div class="book-item" id="book-item">
+							{{book.name}}
 							<a name="book-{{book.number}}">
 							<span class="number hidden">{{book.number}}</span>
 							<span class="author hidden">{{book.author}}</span>
-							<span class="title hidden">{{book.title}}</span>							
+							<span class="title hidden">{{book.title}}</span>
+							<span class="name hidden">{{book.name}}</span>						
 							<a href="./{{ book.number }}" class="book-image">
 								{% if book.image.exists %}
 									<div class="cover">
@@ -52,7 +54,7 @@
 								{% else %}
 									<img class="placeholder" src="/images/coming-soon.png">
 								{% endif %}
-								<span class="donator">Donated by <span class="name">{{book.name}}</span></span>
+								<span class="donator">Donated by {{book.name}}</span>
 							</a>
 						</div>
 				{% endfor %}
