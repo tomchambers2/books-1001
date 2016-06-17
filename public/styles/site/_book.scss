@@ -13,6 +13,16 @@
     margin: 50px 0;
   }
   .columns {
+    .read-book {
+      font-style: italic;
+      .add-comment-link {
+        text-decoration: underline;
+      }
+    }
+    .add-comment {
+      display: none;
+    }
+
     margin-top: 25px;
     display: flex;
     .left {

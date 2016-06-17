@@ -222,6 +222,12 @@ header.home {
   .book .columns {
     margin-top: 25px;
     display: flex; }
+    .book .columns .read-book {
+      font-style: italic; }
+      .book .columns .read-book .add-comment-link {
+        text-decoration: underline; }
+    .book .columns .add-comment {
+      display: none; }
     .book .columns .left {
       flex-basis: 60%;
       margin-right: 70px; }

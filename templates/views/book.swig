@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY9jo3HR5kcE-UM5zYPT45LPHGa9gd3ec&libraries=places"></script>
 	<script src="/js/history-map.js"></script>
 	<script src="/js/autocomplete.js"></script>
+	<script src="/js/comment-dropdown.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -43,7 +44,7 @@
 
 		<div class="columns">
 			<div class="left">
-				<p>"{{book.dedication}}"</p>
+				<p>&ldquo;{{book.dedication}}&rdquo;</p>
 				<p>
 					Book {{paddedBookNumber}}<br>
 					Donated by {{book.name}}
@@ -64,33 +65,37 @@
 
 				{# <div id="map" data-comments="{{comments-string}}"></div> #}
 
+
 				{% if commentAdded %}
 					<h2>Thanks for adding your comment, please click the link in your email to make it visible</h2>
 				{% else %}
-					<p>Have you read this book? Add your comment</p>
-					{% for error in commentValidationErrors %}
-						<p class="highlight">{{error.message}}</p>
-					{% endfor %}
+					<p class="read-book">Have you read this book? <a class="add-comment-link">Add your comment</a></p>
 
-					<form method="POST">
-						<input type="hidden" name="bookId" value="{{book.id}}">
+					<div class="add-comment">
+						{% for error in commentValidationErrors %}
+							<p class="highlight">{{error.message}}</p>
+						{% endfor %}
 
-						<label for="name">Your name</label>
-						<input type="text" id="name" name="name" placeholder="Enter your name">
+						<form method="POST">
+							<input type="hidden" name="bookId" value="{{book.id}}">
 
-						<label for="body">Comment</label>
-						<textarea name="body" id="body" cols="30" rows="10" placeholder="Say a few words about this book"></textarea>
+							<label for="name">Your name</label>
+							<input type="text" id="name" name="name" placeholder="Enter your name">
 
-						<label for="email">Email</label>
-						<input type="text" id="email" name="email" placeholder="Enter your email">
+							<label for="body">Comment</label>
+							<textarea name="body" id="body" cols="30" rows="10" placeholder="Say a few words about this book"></textarea>
 
-						<label for="autocomplete">Location</label>
-						<input type="text" name="location" id="autocomplete">
-						<input type="hidden" name="geo_location_lat" id="geo_location_lat">
-						<input type="hidden" name="geo_location_lng" id="geo_location_lng">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" placeholder="Enter your email">
 
-						<button type="submit">Add comment</button>
-					</form>
+							<label for="autocomplete">Location</label>
+							<input type="text" name="location" id="autocomplete">
+							<input type="hidden" name="geo_location_lat" id="geo_location_lat">
+							<input type="hidden" name="geo_location_lng" id="geo_location_lng">
+
+							<button type="submit">Add comment</button>
+						</form>
+					</div>
 				{% endif %}
 			</div>
 			<div class="right">
