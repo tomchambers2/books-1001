@@ -18,6 +18,7 @@ function updateSize(size) {
 }
 
 function fixLastRow(size) {
+	$('.book-void').remove();
 	var overspill = $('.books').children().length % size;
 	var requiredVoidBooks = size - overspill;
 	if ($('.books').children().length % size > 0) {
@@ -39,6 +40,22 @@ function scaleToDevice() {
 
 $(document).on('ready', function() {
 	size = 2;
+
+	var options = {
+	valueNames: ['title','number','author','name'],
+	listClass: 'books',
+	item: 'book-item'
+	};
+
+	var booksList = new List('books-list', options);
+
+	booksList.on('updated', function() {
+		fixLastRow(size);
+	})
+
+	$('.search-input').keyup(function() {
+		fixLastRow(size);
+	});	
 
 	fixLastRow(size);
 

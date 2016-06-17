@@ -3,7 +3,6 @@
 {% block js %}
 	<script src="/js/book-resize.js"></script>
 	<script src="/js/lib/list.js"></script>
-	<script src="/js/list-init.js"></script>
 	<script src="/js/show-search.js"></script>
 	{#<script src="/js/infinite-scroll.js"></script>#}
 {% endblock %}

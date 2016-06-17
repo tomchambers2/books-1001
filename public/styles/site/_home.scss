@@ -89,7 +89,7 @@ header.home {
 			display: inline-block;
 			/*height: 28px;*/
 		}
-		.book-item:before {
+		.book-item:not(.book-void):before {
 			content: 'Coming soon';
 			position: absolute;
 			margin-top: 33%;
