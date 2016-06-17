@@ -26,13 +26,7 @@
 		</p>
 
 		<p>
-			This is a library that will be filled with a thousand and one books, each one donated by someone who loves that book and thinks that other people might love it too.
-		</p>
-		<p>
-			On this website you can browse all of the books that have been given and read the personal dedications from the donors.
-		</p>
-		<p>
-			Each book is available to take out and pass on from our physical “A Thousand and One Books Library” which is currently open on Greenwich Peninsula until July  2nd as part of LIFT 16
+			This is a library that will be filled with a thousand and one books, each one donated by someone who loves that book and thinks that other people might love it too. On this website you can browse all of the books that have been given and read the personal dedications from the donors. Each book is available to take out and pass on from our physical “A Thousand and One Books Library” which is currently open on Greenwich Peninsula until July  2nd as part of LIFT 16
 		</p>
 
 		<h1>If you have given a book</h1>
@@ -49,8 +43,8 @@
 		<p>
 			To give your favourite book through our crowdsourcing campaign please <a href="https://www.fundsurfer.com/project/a-thousand-and-one-books">donate here</a>.
 		</p>
+		<h1>Contact</h1>
 		<p>
-			<b>Contact</b><br>
 			<a href="mailto:librarian@athousandandonebooks.com">librarian@athousandandonebooks.com</a>
 		</p>
 		<p>
