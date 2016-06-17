@@ -138,13 +138,17 @@ header.home {
   justify-content: space-between;
   margin: 20px 0 40px;
   font-size: 20px; }
+  .search-box .search-title {
+    color: #7f7f7f;
+    cursor: pointer; }
   .search-box span {
     margin-right: 10px; }
   .search-box input#search {
     width: auto;
     display: inline-block;
     flex-grow: 1;
-    height: 20px; }
+    height: 20px;
+    visibility: hidden; }
 
 @media screen and (max-width: 768px) {
   .search-box {
@@ -165,7 +169,8 @@ header.home {
       height: 100%; }
     .home-content .books .donator {
       margin-top: 10px;
-      display: inline-block; }
+      display: inline-block;
+      height: 28px; }
     .home-content .books .book-item {
       flex-basis: 48.5%;
       padding-bottom: 36px;

@@ -46,6 +46,10 @@ header.home {
 	justify-content: space-between;
 	margin: 20px 0 40px;
 	font-size: 20px;
+	.search-title {
+		color: #7f7f7f;
+		cursor: pointer;
+	}
 	span {
 		margin-right: 10px;
 	}
@@ -54,6 +58,7 @@ header.home {
 		display: inline-block;
 		flex-grow: 1;
 		height: 20px;
+		visibility: hidden;
 	}
 }
 
@@ -85,6 +90,7 @@ header.home {
 		.donator {
 			margin-top: 10px;
 			display: inline-block;
+			height: 28px;
 		}
 		.book-item {
 			flex-basis: 48.5%;
