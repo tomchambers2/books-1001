@@ -35,7 +35,7 @@
 			<div class="books">
 				{% for book in books %}
 						<div class="book-item" id="book-item">
-							<a name="book-{{book.number}}">
+							<a name="book-{{book.number}}"></a>
 							<span class="number hidden">{{book.number}}</span>
 							<span class="author hidden">{{book.author}}</span>
 							<span class="title hidden">{{book.title}}</span>
