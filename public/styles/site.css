@@ -170,35 +170,25 @@ header.home {
     .home-content .books .donator {
       margin-top: 10px;
       display: inline-block;
-      height: 28px; }
+      /*height: 28px;*/ }
+    .home-content .books .book-item:before {
+      content: 'Coming soon';
+      position: absolute;
+      margin-top: 33%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: -1;
+      color: #b9b3b3; }
     .home-content .books .book-item {
       flex-basis: 48.5%;
       padding-bottom: 36px;
-      display: flex;
-      flex-flow: column;
       position: relative; }
       .home-content .books .book-item img {
         width: 100%; }
-      .home-content .books .book-item .book-image {
-        flex: 1;
-        flex-basis: auto; }
-        .home-content .books .book-item .book-image .cover {
-          background: #EEEEEE; }
-      .home-content .books .book-item .book-placeholder:before {
-        font-size: 18px;
-        color: #585858;
-        content: 'Coming soon';
-        margin: auto;
-        width: 80%;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        display: block;
-        line-height: 50px;
-        height: 50px; }
+      .home-content .books .book-item img.placeholder {
+        position: relative;
+        z-index: -2; }
     .home-content .books-1 .book-item {
       flex-basis: 100%; }
     .home-content .books-3 .book-item {
