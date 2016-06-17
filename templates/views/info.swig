@@ -12,10 +12,10 @@
 					<li><a href="/info">Info</a></li>
 					{# <li>Search</li> #}
 				</ul>
- 				<ul class="buttons">
+ 				{# <ul class="buttons">
 					<li class="minus disabled">⊖</li>
 					<li class="plus disabled">⊕</li>
-				</ul>
+				</ul> #}
 			</div>
 		</header>
 
