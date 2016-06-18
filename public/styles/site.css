@@ -133,22 +133,27 @@ header.home {
       color: #7F7F7F; }
 
 .search-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin: 20px 0 40px;
-  font-size: 20px; }
+  font-size: 20px;
+  height: 25px;
+  display: flex; }
   .search-box .search-title {
     color: #7f7f7f;
     cursor: pointer; }
   .search-box span {
     margin-right: 10px; }
   .search-box input#search {
-    width: auto;
-    display: inline-block;
-    flex-grow: 1;
+    width: 100%;
     height: 20px;
-    visibility: hidden; }
+    display: none;
+    border: none;
+    background: none;
+    outline: none; }
+  .search-box .clear {
+    cursor: pointer;
+    color: #7f7f7f;
+    display: none;
+    margin-top: -2px; }
 
 @media screen and (max-width: 768px) {
   .search-box {

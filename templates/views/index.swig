@@ -29,14 +29,14 @@
 
 			<div class="search-box">
 				<span class="search-title">Search by number, donator, author or title</span>
-				<input id="search" class="search search-input" placeholder="Search by number, donator, author or title" />
+				<input id="search" class="search search-input" /> <span class="clear">X</span>
 			</div>
 
 			<div class="books">
 				{% for book in books %}
 						<div class="book-item" id="book-item">
 							<a name="book-{{book.number}}"></a>
-							<span class="number hidden">{{book.number}}</span>
+							<span class="number hidden">{{book.paddedNumber}}</span>
 							<span class="author hidden">{{book.author}}</span>
 							<span class="title hidden">{{book.title}}</span>
 							<span class="name hidden">{{book.name}}</span>						
