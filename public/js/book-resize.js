@@ -1,6 +1,7 @@
 var min = 1;
 var max = 4;
 var size;
+var booksList;
 
 function updateSize(size) {
 	size = size;
@@ -38,8 +39,33 @@ function scaleToDevice() {
 	}
 }
 
+function initSearch() {
+	$('.search-title').on('click', function() {
+		$('.search-title').hide();
+		$('.search-input').show();
+		$('.clear').show();
+		$('.search-input').focus();
+	});
+
+	$('.search-input').on('blur', function() {
+		if (!$('.search-input').val()) {
+			$('.search-title').show();
+			$('.search-input').hide();
+			$('.clear').hide();
+		}
+	})
+
+	$('.clear').click(function() {
+		$('.search-input').val("");
+		$('.search-input').focus();
+		booksList.search();
+	});	
+}
+
 $(document).on('ready', function() {
 	size = 2;
+
+	initSearch();
 
 	var options = {
 	valueNames: ['title','number','author','name'],
@@ -47,7 +73,7 @@ $(document).on('ready', function() {
 	item: 'book-item'
 	};
 
-	var booksList = new List('books-list', options);
+	booksList = new List('books-list', options);
 
 	booksList.on('updated', function() {
 		fixLastRow(size);

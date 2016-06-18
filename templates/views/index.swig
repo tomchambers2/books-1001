@@ -3,7 +3,6 @@
 {% block js %}
 	<script src="/js/book-resize.js"></script>
 	<script src="/js/lib/list.js"></script>
-	<script src="/js/show-search.js"></script>
 	{#<script src="/js/infinite-scroll.js"></script>#}
 {% endblock %}
 
@@ -29,7 +28,7 @@
 
 			<div class="search-box">
 				<span class="search-title">Search by number, donator, author or title</span>
-				<input id="search" class="search search-input" /> <span class="clear">X</span>
+				<input id="search" class="search search-input" /> <span class="clear">&#10005;</span>
 			</div>
 
 			<div class="books">
