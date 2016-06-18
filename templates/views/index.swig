@@ -33,6 +33,12 @@
 			</div>
 
 			<div class="books">
+				<div class="book-item hidden" id="book-item">
+							<span class="number hidden">0</span>
+							<span class="author hidden">x</span>
+							<span class="title hidden">y</span>
+							<span class="name hidden">z</span>						
+				</div>			
 				{% for book in books %}
 						<div class="book-item" id="book-item">
 							<a name="book-{{book.number}}"></a>
