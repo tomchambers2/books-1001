@@ -17,29 +17,27 @@ swig.setDefaults({ cache: false });
 // and documentation.
 
 keystone.init({
+	name: 'A Thousand and One Books',
+	brand: 'A Thousand and One Books',
 
-	'name': 'A Thousand and One Books',
-	'brand': 'A Thousand and One Books',
-	
-	'sass': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
+	sass: 'public',
+	static: 'public',
+	favicon: 'public/favicon.ico',
+	views: 'templates/views',
 	'view engine': 'swig',
-	
+
 	'custom engine': swig.renderFile,
-	
-	'emails': 'templates/emails',
-	
+
+	emails: 'templates/emails',
+
 	'auto update': true,
-	'session': true,
-	'auth': true,
+	session: true,
+	auth: true,
 	'user model': 'User',
 
 	'cloudinary config': process.env.CLOUDINARY_URL,
 
 	// 'module root': process.env.MODULE_ROOT
-
 });
 
 // Load your project's Models
@@ -54,13 +52,12 @@ keystone.set('locals', {
 	_: require('underscore'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
-	editable: keystone.content.editable
+	editable: keystone.content.editable,
 });
 
 // Load your project's Routes
 
 keystone.set('routes', require('./routes'));
-
 
 // Setup common locals for your emails. The following are required by Keystone's
 // default email templates, you may remove them if you're using your own.
@@ -75,9 +72,9 @@ keystone.set('email locals', {
 		buttons: {
 			color: '#fff',
 			background_color: '#2697de',
-			border_color: '#1a7cb7'
-		}
-	}
+			border_color: '#1a7cb7',
+		},
+	},
 });
 
 // Setup replacement rules for emails, to automate the handling of differences
@@ -86,30 +83,48 @@ keystone.set('email locals', {
 // Be sure to update this rule to include your site's actual domain, and add
 // other rules your email templates require.
 
-keystone.set('email rules', [{
-	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.athousandandonebooks.com/images/' : 'http://localhost:3000/images/'
-}, {
-	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'http://www.athousandandonebooks.com/keystone/' : 'http://localhost:3000/keystone/'
-}]);
+keystone.set('email rules', [
+	{
+		find: '/images/',
+		replace:
+			keystone.get('env') == 'production'
+				? 'http://www.athousandandonebooks.com/images/'
+				: 'http://localhost:3000/images/',
+	},
+	{
+		find: '/keystone/',
+		replace:
+			keystone.get('env') == 'production'
+				? 'http://www.athousandandonebooks.com/keystone/'
+				: 'http://localhost:3000/keystone/',
+	},
+]);
 
 // Load your project's email test routes
 
 keystone.set('email tests', require('./routes/emails'));
 
-keystone.set('email nodemailer', mailgunApiTransport({ auth: { api_key: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN } }));
+keystone.set(
+	'email nodemailer',
+	mailgunApiTransport({
+		auth: {
+			api_key: process.env.MAILGUN_API_KEY,
+			domain: process.env.MAILGUN_DOMAIN,
+		},
+	})
+);
 
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'users': 'users'
+	users: 'users',
 });
 
 // Start Keystone to connect to your database and initialise the web server
 
 module.exports = function(mongoose, nodemailer) {
-	console.log("START KEYSTONE")
+	console.log('START KEYSTONE');
+	keystone.set('port', process.env.PORT);
 	keystone.start();
 	return keystone;
 };
